@@ -1,48 +1,51 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto&family=Roboto+Slab&display=swap");
 //fonts
 $font-1: "Open Sans", sans-serif;
 $font-2: "Roboto", sans-serif;
 $font-3: "Roboto Slab", serif;
-$font-4: "Josefin Sans", sans-serif;
+$font-4: "Open Sans", sans-serif;
 
 //colors
 $green: #77aa03;
 $gold: #c87e29;
-$background-color: black;
-$regular-font-color: white;
-$header-font-color: white;
-$wrapper-color: rgba(0, 0, 0, 0.5);
+$background-color: white;
+$regular-font-color: black;
+$navigation-color: black;
+$header-font-color: black;
+$wrapper-color: transparent;
 $buy-button-color: white;
 $buy-button-background-color: $green;
+$menu-item-background: #ddd;
 
 //sizes
 $under-line-size: 100px;
 $column-size: 100%;
-$buy-button-size: 40px;
+$buy-button-size: 100px;
 $under-line-weight: 2px;
 
 //font-sizes
 $header-font-size: 40px;
-$regular-font-size: 20px;
+$regular-font-size: 30px;
 $buy-button-font-size: 14px;
-$small-font-size: 16px;
+$small-font-size: 20px;
 
 //paddings
 $wrapper-vertical-padding: 50px;
 $column-horizontaly-padding: 20px;
+$menu-item-paddings: 10px;
 
 //margins
 $h2-margin-botton: 20px;
 $menu-item-margin-bottom: 20px;
 
 //positions
-$button-position: -10px;
+$button-position: 00px;
 
 //media
 //sizes
-$media-column-size: 40%;
+$media-column-size: 48%;
 html {
   font-family: $font-4;
 }
@@ -58,4 +61,10 @@ h6 {
 
 .hide {
   display: none;
+}
+
+.hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }

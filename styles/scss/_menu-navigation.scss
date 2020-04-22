@@ -1,0 +1,22 @@
+.menu-navigation {
+  $border-color: red;
+  min-width: 250px;
+  color: $navigation-color;
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+
+    a {
+      display: block;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+
+    a.active {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}

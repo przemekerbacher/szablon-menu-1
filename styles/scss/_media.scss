@@ -1,7 +1,29 @@
+@media (min-width: 500px) {
+  .menu-card {
+    .menu-item {
+      flex-wrap: nowrap;
+      .image {
+        max-width: 200px;
+      }
+      .info {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
 @media (min-width: 1024px) {
   .menu-card {
-    .column-1,
-    .column-2 {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1300px) {
+  .menu-card {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .menu-item {
       width: $media-column-size;
     }
   }

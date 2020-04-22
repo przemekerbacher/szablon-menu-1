@@ -8,1018 +8,1224 @@
   </head>
   <body>
     <section class="menu-card">
+      <div class="menu-navigation">
+        <nav class="menu-nav" id="menu">
+          <ul>
+            <li>
+              <a class="category-selector active" data-target="#starters"
+                >Przystawki</a
+              >
+            </li>
+            <li>
+              <a class="category-selector" data-target="#soups">Zupy</a>
+            </li>
+            <li>
+              <a class="category-selector" data-target="#salads">Sałatki</a>
+            </li>
+            <li>
+              <a class="category-selector" data-target="#pizzas">Pizza</a>
+            </li>
+            <li>
+              <a class="category-selector" data-target="#addons"
+                >Dodatki do pizzy</a
+              >
+            </li>
+            <li>
+              <a class="category-selector" data-target="#desers">Desery</a>
+            </li>
+            <li>
+              <a class="category-selector" data-target="#kids-menu"
+                >Menu dla dzieci</a
+              >
+            </li>
+            <li>
+              <a class="category-selector" data-target="#drinks">Napoje</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <div class="wrapper">
+        <div class="basket">
+          <i class="fas fa-shopping-basket"></i> W koszyku (0)
+        </div>
         <div class="container">
           <div class="categories">
-            <div class="column-1">
-              <div id="starters" class="category active">
-                <div class="header">
-                  <h2>Przystawki</h2>
-                </div>
-                <div class="menu-items">
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">1.</span>
+            <div id="starters" class="category active">
+              <div class="header">
+                <h2>Przystawki</h2>
+              </div>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Tatar z polędwicy wołowej"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Tatar z polędwicy wołowej</p>
                     </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Tatar z polędwicy wołowej</p>
-                      </div>
-                      <div class="details">
-                        <small>z klasycznymi dodatkami i pieczywem</small>
-                      </div>
-                    </div>
-                    <div class="price"><span>21.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
+                    <div class="details">
+                      <small>z klasycznymi dodatkami i pieczywem</small>
                     </div>
                   </div>
+                  <div class="price"><span>21.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
 
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">2.</span>
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Hummus z ciecierzycy"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Hummus z ciecierzycy</p>
                     </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Hummus z ciecierzycy</p>
-                      </div>
-                      <div class="details">
-                        <small>ze świeżą papryką, ogórkiem i pieczywem</small>
-                      </div>
+                    <div class="details">
+                      <small>ze świeżą papryką, ogórkiem i pieczywem</small>
                     </div>
-                    <div class="price"><span>11.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
+                  </div>
+                  <div class="price"><span>11.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
                   </div>
                 </div>
               </div>
-              <div id="soups" class="category">
-                <div class="header">
-                  <h2>Zupy</h2>
-                </div>
-                <div class="menu-items">
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">1.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Zupa tajska</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >z kurczakiem, glonami wakame, makaronem ryżowym i
-                          chilli</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>9.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">2.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Krem z pomidorowy-pomarańczowy</p>
-                      </div>
-                      <div class="details">
-                        <small>z mozzarellą i grzankami</small>
-                      </div>
-                    </div>
-                    <div class="price"><span>8.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">3.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Zupa dnia</p>
-                      </div>
-                      <div class="details"><small></small></div>
-                    </div>
-                    <div class="price"><span>5.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
+            </div>
+            <div id="soups" class="category">
+              <div class="header">
+                <h2>Zupy</h2>
               </div>
-              <div id="pizzas" class="category">
-                <div class="header">
-                  <h2>Pizza</h2>
-                </div>
-                <div class="menu-items">
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">1.</span>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Zupa tajska"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Zupa tajska</p>
                     </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Margherita</p>
-                      </div>
-                      <div class="details">
-                        <small>sos pomidorowy, mozzarella</small>
-                      </div>
-                    </div>
-                    <div class="price"><span>od 16.90</span></div>
-                    <div class="buy">
-                      <button
-                        class="add-to-basket show-modal"
-                        data-id="1"
-                        data-name="Margherita"
-                        data-price="16.90"
-                        data-target="#customize-pizza"
+                    <div class="details">
+                      <small
+                        >z kurczakiem, glonami wakame, makaronem ryżowym i
+                        chilli</small
                       >
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
                     </div>
                   </div>
+                  <div class="price"><span>9.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
 
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">2.</span>
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Krem  z pomidorowy-pomarańczowy"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Krem z pomidorowy-pomarańczowy</p>
                     </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Salame</p>
-                      </div>
-                      <div class="details">
-                        <small>sos pomidorowy, mozzarella, salami</small>
-                      </div>
-                    </div>
-                    <div class="price"><span>od 18.90</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
+                    <div class="details">
+                      <small>z mozzarellą i grzankami</small>
                     </div>
                   </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">3.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Hawai</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos pomidorowy, mozzarella, szynka, ananas</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 19.90</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
+                  <div class="price"><span>8.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
                   </div>
+                </div>
 
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">4.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Carbonara</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos śmietanowy, mozzarella, bekon, jajko, czosnek,
-                          natka, parmezan</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 19.90</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Zupa dnia"
+                    />
                   </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">5.</span>
+                  <div class="info">
+                    <div class="name">
+                      <p>Zupa dnia</p>
                     </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Vegetariana</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos pomidorowy, mozzarella, cukinia, papryka, cebula
-                          czerwona, oliwki, brokuły</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 19.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
+                    <div class="details"><small></small></div>
                   </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">6.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Spinaci</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos śmietanowy, mozzarella, szpinak, suszone
-                          pomidory, feta, prażony słonecznik</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 20.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">7.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Farmerska</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos, mozzarella, kurczak, bekon, pieczarki, brokuły,
-                          cebula</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 20.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">8.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Quattro formaggi</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos, mozzarella, gorgonzola, parmezan,
-                          camembert</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 21.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">9.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Prosciutto</p>
-                      </div>
-                      <div class="details">
-                        <small>sos pomidorowy, mozzarella, szynka</small>
-                      </div>
-                    </div>
-                    <div class="price"><span>od 21.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">10.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Capricciosa</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos pomidorowy, mozzarella, szynka, pieczarki</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 22.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">11.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Tonno</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos pomidorowy, mozzarella, tuńczyk, czarne oliwki,
-                          cebula czerwona</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 22.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">12.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Rustica</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos pomidorowy, mozzarella, salami, papryka,
-                          cebula</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 22.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">13.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Pollo</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos, mozzarella, kurczak, pieczarki, papryka,
-                          kukurydza, cebula czerwona</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 23.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">14.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Chorizo</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos pomidorowy, mozzarella, chorizo, papryka
-                          jalapeno, cebula czerwona</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 23.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">15.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Mexicana /pikantna/</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >sos, mozzarella, salami, szynka, papryka, kukurydza,
-                          papryczki jalapenos</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 24.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">16.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Supreme</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >ssos, mozzarella, szynka, salami, boczek, kurczak,
-                          cebula czerwona</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>od 24.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
+                  <div class="price"><span>5.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="column-2">
-              <div id="salads" class="category">
-                <div class="header">
-                  <h2>Sałaty</h2>
-                </div>
-                <div class="menu-items">
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">1.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Cezar z kurczakiem</p>
-                      </div>
-                      <div class="details"><small></small></div>
-                    </div>
-                    <div class="price"><span>od 20.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">2.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Z krewetkami i salsą mango</p>
-                      </div>
-                      <div class="details"><small></small></div>
-                    </div>
-                    <div class="price"><span>od 25.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
+            <div id="salads" class="category">
+              <div class="header">
+                <h2>Sałaty</h2>
               </div>
-              <div id="addons" class="category">
-                <div class="header">
-                  <h2>Dodatki</h2>
-                </div>
-                <div class="menu-items">
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">1.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Sos czosnkowy</p>
-                      </div>
-                      <div class="details"><small></small></div>
-                    </div>
-                    <div class="price"><span>4.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Cezar z kurczakiem"
+                    />
                   </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">2.</span>
+                  <div class="info">
+                    <div class="name">
+                      <p>Cezar z kurczakiem</p>
                     </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Sos Mexico</p>
-                      </div>
-                      <div class="details"><small></small></div>
-                    </div>
-                    <div class="price"><span>5.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
+                    <div class="details"><small></small></div>
                   </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">3.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Sos green good</p>
-                      </div>
-                      <div class="details"><small></small></div>
-                    </div>
-                    <div class="price"><span>5.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">4.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Keczup</p>
-                      </div>
-                      <div class="details"><small></small></div>
-                    </div>
-                    <div class="price"><span>3.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">5.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Majonez</p>
-                      </div>
-                      <div class="details"><small></small></div>
-                    </div>
-                    <div class="price"><span>3.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
+                  <div class="price"><span>20.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
                   </div>
                 </div>
-              </div>
-              <div id="desers" class="category">
-                <div class="header">
-                  <h2>Desery</h2>
-                </div>
-                <div class="menu-items">
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">1.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Suflet czekoladowy</p>
-                      </div>
-                      <div class="details">
-                        <small>z musem malinowym</small>
-                      </div>
-                    </div>
-                    <div class="price"><span>12.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
 
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">2.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Beza z serkiem mascarpone</p>
-                      </div>
-                      <div class="details">
-                        <small>i owocami sezonowymi</small>
-                      </div>
-                    </div>
-                    <div class="price"><span>13.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Z krewetkami i salsą mango"
+                    />
                   </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">3.</span>
+                  <div class="info">
+                    <div class="name">
+                      <p>Z krewetkami i salsą mango</p>
                     </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Sernik oreo</p>
-                      </div>
-                      <div class="details">
-                        <small
-                          >mięso, papryczki jalapeno, bułka wypiekana w
-                          restauracji, sałata, pomidor, ogórek, konfitura z
-                          cebuli, sos</small
-                        >
-                      </div>
-                    </div>
-                    <div class="price"><span>13.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
+                    <div class="details"><small></small></div>
                   </div>
-                </div>
-              </div>
-              <div id="kids-menu" class="category">
-                <div class="header">
-                  <h2>Kids menu</h2>
-                </div>
-                <div class="menu-items">
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">1.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Naleśniki z serkiem</p>
-                      </div>
-                      <div class="details">
-                        <small>i sosem czekoladowym</small>
-                      </div>
-                    </div>
-                    <div class="price"><span>12.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">2.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Placki jogurtowe</p>
-                      </div>
-                      <div class="details">
-                        <small>z owoccami i cukrem pudrem</small>
-                      </div>
-                    </div>
-                    <div class="price"><span>12.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">3.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Nugettsy z frytkami</p>
-                      </div>
-                      <div class="details">
-                        <small>i ketchupem</small>
-                      </div>
-                    </div>
-                    <div class="price"><span>12.00</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="drinks" class="category">
-                <div class="header">
-                  <h2>Napoje</h2>
-                </div>
-                <div class="menu-items">
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">1.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Coca-Cola</p>
-                      </div>
-                      <div class="details"><small>0.25 l</small></div>
-                    </div>
-                    <div class="price"><span>8.50</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">2.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Coca-Cola Zero</p>
-                      </div>
-                      <div class="details"><small>0.25 l</small></div>
-                    </div>
-                    <div class="price"><span>8.50</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">3.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Fanta</p>
-                      </div>
-                      <div class="details"><small>0.25 l</small></div>
-                    </div>
-                    <div class="price"><span>8.50</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">4.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Sprite</p>
-                      </div>
-                      <div class="details"><small>0.25 l</small></div>
-                    </div>
-                    <div class="price"><span>8.50</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">5.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Kinley</p>
-                      </div>
-                      <div class="details"><small>0.25 l</small></div>
-                    </div>
-                    <div class="price"><span>8.50</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">6.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Herbata mlożona Fuze</p>
-                      </div>
-                      <div class="details"><small>0.25 l</small></div>
-                    </div>
-                    <div class="price"><span>8.50</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">7.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Sok pomarańczowy</p>
-                      </div>
-                      <div class="details"><small>0.25 l</small></div>
-                    </div>
-                    <div class="price"><span>8.50</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">8.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Sok grejfrutowy</p>
-                      </div>
-                      <div class="details"><small>0.25 l</small></div>
-                    </div>
-                    <div class="price"><span>8.50</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">9.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Sok jabłkowy</p>
-                      </div>
-                      <div class="details"><small>0.25 l</small></div>
-                    </div>
-                    <div class="price"><span>8.50</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">10.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Sok o smaku czarnej porzeczki</p>
-                      </div>
-                      <div class="details"><small>0.25 l</small></div>
-                    </div>
-                    <div class="price"><span>8.50</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="menu-item">
-                    <div class="id">
-                      <span class="numer">11.</span>
-                    </div>
-                    <div class="info">
-                      <div class="name">
-                        <p>Sok pomidorowy</p>
-                      </div>
-                      <div class="details"><small>0.25 l</small></div>
-                    </div>
-                    <div class="price"><span>8.50</span></div>
-                    <div class="buy">
-                      <button class="add-to-basket">
-                        <i class="fas fa-plus add"></i>
-                        <i class="fas fa-check ok hide"></i>
-                      </button>
-                    </div>
+                  <div class="price"><span>25.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
+            <div id="pizzas" class="category">
+              <div class="header">
+                <h2>Pizza</h2>
+              </div>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Margherita"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Margherita</p>
+                    </div>
+                    <div class="details">
+                      <small>sos pomidorowy, mozzarella</small>
+                    </div>
+                  </div>
+                  <div class="price"><span>16.90</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Salame"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Salame</p>
+                    </div>
+                    <div class="details">
+                      <small>sos pomidorowy, mozzarella, salami</small>
+                    </div>
+                  </div>
+                  <div class="price"><span>18.90</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Hawai"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Hawai</p>
+                    </div>
+                    <div class="details">
+                      <small>sos pomidorowy, mozzarella, szynka, ananas</small>
+                    </div>
+                  </div>
+                  <div class="price"><span>19.90</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Carbonara"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Carbonara</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >sos śmietanowy, mozzarella, bekon, jajko, czosnek,
+                        natka, parmezan</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>19.90</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Vegetariana"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Vegetariana</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >sos pomidorowy, mozzarella, cukinia, papryka, cebula
+                        czerwona, oliwki, brokuły</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>19.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Spinaci"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Spinaci</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >sos śmietanowy, mozzarella, szpinak, suszone pomidory,
+                        feta, prażony słonecznik</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>20.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Farmerska"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Farmerska</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >sos, mozzarella, kurczak, bekon, pieczarki, brokuły,
+                        cebula</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>20.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Quattro formaggi"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Quattro formaggi</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >sos, mozzarella, gorgonzola, parmezan, camembert</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>21.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Prosciutto"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Prosciutto</p>
+                    </div>
+                    <div class="details">
+                      <small>sos pomidorowy, mozzarella, szynka</small>
+                    </div>
+                  </div>
+                  <div class="price"><span>21.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Capricciosa"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Capricciosa</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >sos pomidorowy, mozzarella, szynka, pieczarki</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>22.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Tonno"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Tonno</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >sos pomidorowy, mozzarella, tuńczyk, czarne oliwki,
+                        cebula czerwona</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>22.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Rustica"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Rustica</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >sos pomidorowy, mozzarella, salami, papryka,
+                        cebula</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>22.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Pollo"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Pollo</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >sos, mozzarella, kurczak, pieczarki, papryka,
+                        kukurydza, cebula czerwona</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>23.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Chorizo"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Chorizo</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >sos pomidorowy, mozzarella, chorizo, papryka jalapeno,
+                        cebula czerwona</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>23.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Mexicana /pikantna/"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Mexicana /pikantna/</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >sos, mozzarella, salami, szynka, papryka, kukurydza,
+                        papryczki jalapenos</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>24.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Supreme"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Supreme</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >ssos, mozzarella, szynka, salami, boczek, kurczak,
+                        cebula czerwona</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>24.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="addons" class="category">
+              <div class="header">
+                <h2>Dodatki</h2>
+              </div>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Sos czosnkowy"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Sos czosnkowy</p>
+                    </div>
+                    <div class="details"><small></small></div>
+                  </div>
+                  <div class="price"><span>4.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Sos Mexico"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Sos Mexico</p>
+                    </div>
+                    <div class="details"><small></small></div>
+                  </div>
+                  <div class="price"><span>5.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Sos green good"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Sos green good</p>
+                    </div>
+                    <div class="details"><small></small></div>
+                  </div>
+                  <div class="price"><span>5.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Keczup"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Keczup</p>
+                    </div>
+                    <div class="details"><small></small></div>
+                  </div>
+                  <div class="price"><span>3.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Majonez"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Majonez</p>
+                    </div>
+                    <div class="details"><small></small></div>
+                  </div>
+                  <div class="price"><span>3.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="desers" class="category">
+              <div class="header">
+                <h2>Desery</h2>
+              </div>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Suflet czekoladowy"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Suflet czekoladowy</p>
+                    </div>
+                    <div class="details"><small>z musem malinowym</small></div>
+                  </div>
+                  <div class="price"><span>12.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Beza z serkiem mascarpone"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Beza z serkiem mascarpone</p>
+                    </div>
+                    <div class="details">
+                      <small>i owocami sezonowymi</small>
+                    </div>
+                  </div>
+                  <div class="price"><span>13.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Sernik oreo"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Sernik oreo</p>
+                    </div>
+                    <div class="details">
+                      <small
+                        >mięso, papryczki jalapeno, bułka wypiekana w
+                        restauracji, sałata, pomidor, ogórek, konfitura z
+                        cebuli, sos</small
+                      >
+                    </div>
+                  </div>
+                  <div class="price"><span>13.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="kids-menu" class="category">
+              <div class="header">
+                <h2>Kids menu</h2>
+              </div>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Naleśniki z serkiem"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Naleśniki z serkiem</p>
+                    </div>
+                    <div class="details">
+                      <small>i sosem czekoladowym</small>
+                    </div>
+                  </div>
+                  <div class="price"><span>12.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Placki jogurtowe"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Placki jogurtowe</p>
+                    </div>
+                    <div class="details">
+                      <small>z owoccami i cukrem pudrem</small>
+                    </div>
+                  </div>
+                  <div class="price"><span>12.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Nugettsy z frytkami"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Nugettsy z frytkami</p>
+                    </div>
+                    <div class="details"><small>i ketchupem</small></div>
+                  </div>
+                  <div class="price"><span>12.00</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="drinks" class="category">
+              <div class="header">
+                <h2>Napoje</h2>
+              </div>
+              <div class="menu-items">
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Coca-Cola"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Coca-Cola</p>
+                    </div>
+                    <div class="details"><small>0.25 l</small></div>
+                  </div>
+                  <div class="price"><span>8.50</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Coca-Cola Zero"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Coca-Cola Zero</p>
+                    </div>
+                    <div class="details"><small>0.25 l</small></div>
+                  </div>
+                  <div class="price"><span>8.50</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Fanta"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Fanta</p>
+                    </div>
+                    <div class="details"><small>0.25 l</small></div>
+                  </div>
+                  <div class="price"><span>8.50</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Sprite"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Sprite</p>
+                    </div>
+                    <div class="details"><small>0.25 l</small></div>
+                  </div>
+                  <div class="price"><span>8.50</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Kinley"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Kinley</p>
+                    </div>
+                    <div class="details"><small>0.25 l</small></div>
+                  </div>
+                  <div class="price"><span>8.50</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Herbata mlożona Fuze"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Herbata mlożona Fuze</p>
+                    </div>
+                    <div class="details"><small>0.25 l</small></div>
+                  </div>
+                  <div class="price"><span>8.50</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Sok pomarańczowy"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Sok pomarańczowy</p>
+                    </div>
+                    <div class="details"><small>0.25 l</small></div>
+                  </div>
+                  <div class="price"><span>8.50</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Sok grejfrutowy"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Sok grejfrutowy</p>
+                    </div>
+                    <div class="details"><small>0.25 l</small></div>
+                  </div>
+                  <div class="price"><span>8.50</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Sok jabłkowy"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Sok jabłkowy</p>
+                    </div>
+                    <div class="details"><small>0.25 l</small></div>
+                  </div>
+                  <div class="price"><span>8.50</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Sok o smaku czarnej porzeczki"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Sok o smaku czarnej porzeczki</p>
+                    </div>
+                    <div class="details"><small>0.25 l</small></div>
+                  </div>
+                  <div class="price"><span>8.50</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="menu-item">
+                  <div class="image">
+                    <img
+                      src="https://dummyimage.com/400x400/b60609/11760F.png&text=Zdjęcie+produktu"
+                      alt="Sok pomidorowy"
+                    />
+                  </div>
+                  <div class="info">
+                    <div class="name">
+                      <p>Sok pomidorowy</p>
+                    </div>
+                    <div class="details"><small>0.25 l</small></div>
+                  </div>
+                  <div class="price"><span>8.50</span> zł</div>
+                  <div class="buy">
+                    <button class="add-to-basket">
+                      <i class="fas fa-plus add"></i>
+                      <i class="fas fa-check ok hide"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="alergens">
+          <button data-target="#alergens" class="collapsible">
+            Lista alergenów znajduje się tutaj
+          </button>
+          <div id="alergens" class="hidden">
+            <h3>Alergeny w produktach</h3>
+            <ul>
+              <li>
+                <p>A – dwutlenek siarki</p>
+              </li>
+              <li>
+                <p>B – gorczyca</p>
+              </li>
+              <li>
+                <p>C – jaja i produkty pochodne</p>
+              </li>
+              <li>
+                <p>D – mleko i produkty pochodne (laktoza)</p>
+              </li>
+              <li>
+                <p>E – orzechy</p>
+              </li>
+              <li>
+                <p>F - sezam</p>
+              </li>
+              <li>
+                <p>G - ryby</p>
+              </li>
+              <li>
+                <p>H – mięczaki i owoce morza</p>
+              </li>
+              <li>
+                <p>I – zboża (gluten)</p>
+              </li>
+              <li>
+                <p>J – gorczyca</p>
+              </li>
+              <li>
+                <p>K – łubin</p>
+              </li>
+              <li>
+                <p>L – skorupiaki</p>
+              </li>
+              <li>
+                <p>Ł – soja i produkty pochodne</p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
