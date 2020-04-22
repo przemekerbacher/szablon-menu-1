@@ -1,0 +1,133 @@
+.menu-card {
+  // background-image: url(../../images/background.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: $background-color;
+  color: $regular-font-color;
+
+  .wrapper {
+    background-color: $wrapper-color;
+    padding: $wrapper-vertical-padding 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    color: $header-font-color;
+    font-size: $header-font-size;
+    margin-bottom: $h2-margin-botton;
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+    justify-content: space-around;
+    justify-items: space-between;
+  }
+
+  .column-1 {
+    .category {
+      &:nth-child(odd)::after {
+        content: "";
+        display: block;
+        width: $under-line-size;
+        border: $under-line-weight solid $gold;
+        background-color: $gold;
+      }
+
+      &:nth-child(even)::after {
+        content: "";
+        display: block;
+        width: $under-line-size;
+        border: $under-line-weight solid $green;
+        background-color: $green;
+      }
+    }
+  }
+
+  .column-2 {
+    .category {
+      &:nth-child(even)::after {
+        content: "";
+        display: block;
+        width: $under-line-size;
+        border: $under-line-weight solid $gold;
+        background-color: $gold;
+      }
+
+      &:nth-child(odd)::after {
+        content: "";
+        display: block;
+        width: $under-line-size;
+        border: $under-line-weight solid $green;
+        background-color: $gold;
+      }
+    }
+  }
+
+  .column-1,
+  .column-2 {
+    width: $column-size;
+    padding: 0 $column-horizontaly-padding;
+  }
+  .menu-item {
+    display: flex;
+    width: 100%;
+    margin-bottom: $menu-item-margin-bottom;
+    font-size: $regular-font-size;
+
+    .numer {
+      margin-right: 10px;
+    }
+
+    .info {
+      margin-right: 10px;
+    }
+
+    .price {
+      margin-left: auto;
+      white-space: nowrap;
+    }
+
+    .buy {
+      margin-left: 10px;
+      button {
+        position: relative;
+        top: $button-position;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        justify-self: flex-end;
+
+        margin-left: 10px;
+
+        height: $buy-button-size;
+        width: $buy-button-size;
+
+        border-style: none;
+        border-radius: 50%;
+
+        background-color: $buy-button-background-color;
+
+        color: $buy-button-color;
+        font-size: $buy-button-font-size;
+
+        transition: 0.6s;
+      }
+    }
+  }
+
+  .categories {
+    padding-top: 0;
+  }
+
+  .menu-items {
+    margin-bottom: 20px;
+  }
+}

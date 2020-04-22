@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
+//fonts
+$font-1: "Open Sans", sans-serif;
+$font-2: "Roboto", sans-serif;
+$font-3: "Roboto Slab", serif;
+$font-4: "Josefin Sans", sans-serif;
+
+//colors
+$green: #77aa03;
+$gold: #c87e29;
+$background-color: black;
+$regular-font-color: white;
+$header-font-color: white;
+$wrapper-color: rgba(0, 0, 0, 0.5);
+$buy-button-color: white;
+$buy-button-background-color: $green;
+
+//sizes
+$under-line-size: 100px;
+$column-size: 100%;
+$buy-button-size: 40px;
+$under-line-weight: 2px;
+
+//font-sizes
+$header-font-size: 40px;
+$regular-font-size: 20px;
+$buy-button-font-size: 14px;
+$small-font-size: 16px;
+
+//paddings
+$wrapper-vertical-padding: 50px;
+$column-horizontaly-padding: 20px;
+
+//margins
+$h2-margin-botton: 20px;
+$menu-item-margin-bottom: 20px;
+
+//positions
+$button-position: -10px;
+
+//media
+//sizes
+$media-column-size: 40%;
+html {
+  font-family: $font-4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-4;
+}
+
+.hide {
+  display: none;
+}

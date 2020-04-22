@@ -1,0 +1,8 @@
+@media (min-width: 1024px) {
+  .menu-card {
+    .column-1,
+    .column-2 {
+      width: $media-column-size;
+    }
+  }
+}
