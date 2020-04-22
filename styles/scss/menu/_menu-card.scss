@@ -1,5 +1,5 @@
 .menu-card {
-  @import "menu-navigation";
+  padding-top: 50px;
   background-attachment: fixed;
   background-size: cover;
 
@@ -67,6 +67,8 @@
   //#endregion
 
   .wrapper {
+    position: relative;
+
     width: 100%;
     background-color: $wrapper-color;
     padding: 20px;

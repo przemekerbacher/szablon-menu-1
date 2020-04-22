@@ -1,0 +1,22 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #ddd;
+  box-shadow: -1px 0 4px #777;
+  height: 50px;
+  padding: 10px;
+  background-color: white;
+  z-index: 1;
+  align-items: center;
+
+  .basket {
+  }
+  svg {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+}
