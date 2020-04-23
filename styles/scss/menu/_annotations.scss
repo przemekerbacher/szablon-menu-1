@@ -1,0 +1,47 @@
+.annotations {
+  height: 100vh;
+  width: 100vw;
+  top: -100%;
+  position: fixed;
+  left: 0;
+  background-color: $hidden-menu-background;
+  display: flex;
+  flex-direction: column;
+  padding: $hidden-menu-paddings;
+  z-index: 2;
+  overflow: auto;
+  transition: top 0.3s;
+  justify-items: stretch;
+
+  &.active {
+    top: 0;
+  }
+
+  .close {
+    position: absolute;
+    top: $hidden-menu-close-size;
+    right: $hidden-menu-close-size;
+    padding: 0px;
+    cursor: pointer;
+  }
+
+  h3 {
+    text-align: center;
+    margin-bottom: $h2-margin-botton;
+  }
+
+  .content {
+    textarea {
+      width: 100%;
+    }
+  }
+  .save-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  button.save {
+    padding: 10px 20px;
+    border: 1px solid $hidden-menu-border-color;
+  }
+}

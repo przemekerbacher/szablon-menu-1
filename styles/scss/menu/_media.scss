@@ -17,12 +17,18 @@
     flex-direction: row;
     flex-wrap: nowrap;
   }
+
+  #menu {
+    display: block;
+  }
+
+  .menu-expand {
+    display: none;
+  }
 }
 
 @media (min-width: 1300px) {
   .menu-card {
-    flex-direction: row;
-    flex-wrap: nowrap;
     .menu-item {
       width: $media-column-size;
     }

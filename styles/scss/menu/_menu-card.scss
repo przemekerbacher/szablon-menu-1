@@ -1,5 +1,5 @@
 .menu-card {
-  padding-top: 50px;
+  padding-top: $menu-card-padding-top;
   background-attachment: fixed;
   background-size: cover;
 
@@ -142,6 +142,13 @@
       animation: animatedOpacity 0.5s both;
     }
   }
+
+  .alergens {
+    svg {
+      margin-right: 10px;
+    }
+  }
+
   .alergens button {
     text-decoration: underline;
     border: none;

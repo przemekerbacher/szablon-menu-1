@@ -5,18 +5,21 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  border-bottom: 1px solid #ddd;
-  box-shadow: -1px 0 4px #777;
-  height: 50px;
-  padding: 10px;
-  background-color: white;
+  border-bottom: 1px solid $navigation-border-color;
+  box-shadow: $navigation-box-shadow;
+  height: $navigation-height;
+  padding: $navigation-paddings;
+  background-color: $navigation-background-color;
+  color: $navigation-color;
   z-index: 1;
   align-items: center;
 
-  .basket {
-  }
   svg {
-    font-size: 20px;
+    font-size: $navigation-icon-size;
     margin-right: 10px;
+  }
+
+  .menu-expand {
+    margin-right: auto;
   }
 }

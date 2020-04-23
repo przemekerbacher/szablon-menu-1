@@ -9,23 +9,37 @@ $wrapper-color: transparent;
 $buy-button-color: white;
 $buy-button-background-color: $green;
 $menu-item-background: #ddd;
+$hidden-menu-background: white;
+$hidden-menu-border-color: black;
+$hidden-menu-hover-color: cadetblue;
+$navigation-border-color: #ddd;
+$navigation-box-shadow: -1px 0 4px #777;
+$navigation-background-color: white;
+$navigation-color: black;
 
 //sizes
 $under-line-size: 100px;
 $column-size: 100%;
 $buy-button-size: 75px;
 $under-line-weight: 2px;
+$hidden-menu-close-size: 30px;
+$navigation-height: 75px;
 
 //font-sizes
 $header-font-size: 40px;
 $regular-font-size: 30px;
 $buy-button-font-size: 14px;
 $small-font-size: 20px;
+$hidden-menu-icon-size: 12px;
+$navigation-icon-size: 50px;
 
 //paddings
 $wrapper-vertical-padding: 50px;
 $column-horizontaly-padding: 20px;
 $menu-item-paddings: 10px;
+$hidden-menu-paddings: 75px 20px;
+$navigation-paddings: 10px;
+$menu-card-padding-top: $navigation-height;
 
 //margins
 $h2-margin-botton: 20px;
