@@ -24,6 +24,14 @@ h6 {
   display: none;
 }
 
+button {
+  outline: none !important;
+}
+
+input[type="submit"] {
+  border: none;
+}
+
 .hidden {
   max-height: 0;
   overflow: hidden;

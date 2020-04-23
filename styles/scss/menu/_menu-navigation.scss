@@ -1,22 +1,40 @@
 .menu-navigation {
-  $border-color: red;
+  position: fixed;
+  top: $navigation-height;
+  z-index: 1;
+  background-color: $background-color;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-right: 1px solid $border-color;
+
+  width: 100%;
+  max-height: calc(100vh - #{$navigation-height});
+  overflow-y: auto;
+  font-size: 25px;
+  text-transform: uppercase;
   min-width: 250px;
   color: $navigation-color;
+
+  max-height: calc(100vh - #{$navigation-height});
+  overflow-y: auto;
+
   ul {
+    height: 100%;
     list-style-type: none;
     display: flex;
     flex-direction: column;
+    justify-items: stretch;
     padding: 0;
     width: 100%;
 
     a {
       display: block;
-      padding: 10px 20px;
+      padding: 20px 20px;
       cursor: pointer;
     }
 
     a.active {
-      border-bottom: 1px solid $border-color;
+      // border-bottom: 1px solid $border-color;
+      color: $gold;
     }
   }
 }

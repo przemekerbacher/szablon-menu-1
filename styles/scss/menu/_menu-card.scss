@@ -1,9 +1,12 @@
 .menu-card {
+  min-height: 100vh;
+  overflow-y: auto;
   padding-top: $menu-card-padding-top;
   background-attachment: fixed;
   background-size: cover;
 
   background-color: $background-color;
+  background-color: rgba(0, 0, 0, 0.5);
   color: $regular-font-color;
 
   display: flex;
@@ -13,8 +16,12 @@
   .menu-item {
     display: flex;
     width: 100%;
-    margin-bottom: $menu-item-margin-bottom;
+    max-width: 400px;
+    background-color: $menu-item-background;
+    background-color: rgba(0, 0, 0, 0.7);
 
+    margin-bottom: $menu-item-margin-bottom;
+    border: 1px solid $border-color;
     font-size: $regular-font-size;
 
     .numer {
@@ -33,9 +40,6 @@
     .buy {
       margin-left: 10px;
       button {
-        position: relative;
-        top: $button-position;
-
         display: flex;
         justify-content: center;
         align-items: center;
@@ -79,8 +83,12 @@
     font-size: $header-font-size;
     margin-bottom: $h2-margin-botton;
     margin-top: 0;
+    text-transform: uppercase;
   }
-
+  .wrapper {
+    max-height: calc(100vh - #{$navigation-height});
+    overflow-y: auto;
+  }
   .categories {
     display: flex;
     flex-wrap: wrap;
@@ -100,24 +108,23 @@
 
   .menu-items {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-wrap: wrap;
     flex-direction: row;
   }
 
   .menu-item {
+    margin: 0 auto;
     padding: $menu-item-paddings;
-    // background-color: $menu-item-background;
     align-items: center;
-    max-width: $column-size;
     display: flex;
     flex-wrap: wrap;
-
-    border: 1px solid #ddd;
-    box-shadow: -1px 1px 5px #ddd;
+    margin-bottom: 10px;
   }
   .image {
     width: 100%;
+    overflow: hidden;
+    border-radius: 5px;
     img {
       display: block;
       margin: 0 auto;
@@ -130,7 +137,7 @@
     margin: 20px 0;
   }
   .details {
-    color: #777;
+    color: $small-font-color;
     font-size: $small-font-size;
   }
   .category {
@@ -141,20 +148,6 @@
       display: block;
       animation: animatedOpacity 0.5s both;
     }
-  }
-
-  .alergens {
-    svg {
-      margin-right: 10px;
-    }
-  }
-
-  .alergens button {
-    text-decoration: underline;
-    border: none;
-    background-color: transparent;
-    color: $regular-font-color;
-    cursor: pointer;
   }
 }
 

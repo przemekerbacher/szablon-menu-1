@@ -1,0 +1,133 @@
+.customize-pizza {
+  $font-color: $regular-font-color;
+  $font-color: white;
+  // $font-color: black;
+  $active-background-color: green;
+  $red: #b60609;
+  background-color: white;
+  background-color: rgba(0, 0, 0, 1);
+
+  max-width: 800px;
+  padding: 20px;
+  color: $font-color;
+  svg {
+    color: $font-color;
+  }
+
+  button {
+    color: $font-color;
+  }
+
+  .header {
+    margin-bottom: 20px;
+  }
+
+  .modal-header {
+    border: none;
+  }
+
+  .category {
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+  }
+  .size {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  .size-button {
+    flex-grow: 1;
+    padding: 10px 20px;
+
+    text-align: center;
+
+    &.active {
+      background-color: $active-background-color;
+      color: $regular-font-color;
+    }
+  }
+
+  .category-button {
+    margin-bottom: 20px;
+    svg {
+      margin-right: 10px;
+    }
+
+    small {
+      margin-left: 10px;
+    }
+  }
+
+  .addon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    .count {
+      margin-right: 10px;
+    }
+    .name {
+      margin: 0 10px;
+    }
+
+    .edit {
+      margin-left: auto;
+      .plus {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .price-summary {
+    font-weight: bold;
+    text-align: right;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .cancel {
+      margin-right: 10px;
+
+      background-color: $red;
+      color: white;
+      padding: 10px 20px;
+    }
+    .save {
+      background-color: $active-background-color;
+      color: white;
+      padding: 10px 20px;
+    }
+  }
+
+  .changes {
+    font-size: $small-font-color;
+    color: $small-font-color;
+  }
+  .amount {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    margin: 20px 0;
+
+    input {
+      width: 50px;
+      padding: 10px;
+    }
+
+    button {
+      height: 50px;
+      width: 50px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid $regular-font-color;
+    }
+  }
+}

@@ -3,7 +3,16 @@
   @import "navigation";
   @import "menu-navigation";
   @import "menu-card";
+  @import "alergens";
   @import "order";
   @import "annotations";
+  @import "customize-pizza";
   @import "media";
+  @import "login";
+
+  background-image: url("../../../images/background.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  // background-color: black;
 }

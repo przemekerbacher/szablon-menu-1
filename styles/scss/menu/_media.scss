@@ -1,21 +1,23 @@
 @media (min-width: 500px) {
   .menu-card {
-    .menu-item {
-      flex-wrap: nowrap;
-      .image {
-        max-width: 200px;
-      }
-      .info {
-        margin-left: 10px;
+    .alergens {
+      li {
+        flex-basis: 33%;
       }
     }
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 700px) {
   .menu-card {
     flex-direction: row;
     flex-wrap: nowrap;
+  }
+
+  .menu-navigation {
+    position: static;
+    width: 250px;
+    padding: 10px;
   }
 
   #menu {
@@ -25,12 +27,24 @@
   .menu-expand {
     display: none;
   }
+
+  .navigation {
+    padding: 10px 50px;
+  }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 800px) {
   .menu-card {
     .menu-item {
       width: $media-column-size;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .menu-card {
+    .menu-item {
+      width: 30%;
     }
   }
 }

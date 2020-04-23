@@ -1,53 +1,53 @@
 //colors
 $green: #77aa03;
 $gold: #c87e29;
-$background-color: white;
-$regular-font-color: black;
-$navigation-color: black;
-$header-font-color: black;
-$wrapper-color: transparent;
-$buy-button-color: white;
-$buy-button-background-color: $green;
-$menu-item-background: #ddd;
-$hidden-menu-background: white;
-$hidden-menu-border-color: black;
-$hidden-menu-hover-color: cadetblue;
-$navigation-border-color: #ddd;
-$navigation-box-shadow: -1px 0 4px #777;
-$navigation-background-color: white;
-$navigation-color: black;
+$red: #b30908;
 
-//sizes
-$under-line-size: 100px;
-$column-size: 100%;
-$buy-button-size: 75px;
-$under-line-weight: 2px;
-$hidden-menu-close-size: 30px;
-$navigation-height: 75px;
+$border-color: $gold;
+$small-font-color: #ccc;
 
-//font-sizes
-$header-font-size: 40px;
-$regular-font-size: 30px;
-$buy-button-font-size: 14px;
-$small-font-size: 20px;
-$hidden-menu-icon-size: 12px;
+//navigation
+$navigation-color: white;
+$navigation-background-color: black;
+$navigation-border-color: white;
+$navigation-box-shadow: -1px 0 4px transparent;
+$navigation-color: white;
+$navigation-icon-color: white;
+$navigation-height: 100px;
+$navigation-paddings: 10px;
 $navigation-icon-size: 50px;
 
-//paddings
+//menu-card
+$background-color: black;
+$regular-font-color: white;
+$header-font-color: white;
+$wrapper-color: transparent;
+$header-font-size: 40px;
+$regular-font-size: 30px;
+$small-font-size: 25px;
 $wrapper-vertical-padding: 50px;
-$column-horizontaly-padding: 20px;
-$menu-item-paddings: 10px;
-$hidden-menu-paddings: 75px 20px;
-$navigation-paddings: 10px;
-$menu-card-padding-top: $navigation-height;
-
-//margins
 $h2-margin-botton: 20px;
+
+//menu-item
+$buy-button-color: white;
+$buy-button-background-color: $green;
+$buy-button-background-color: $red;
+$buy-button-size: 75px;
+$buy-button-font-size: 14px;
+$menu-item-background: black;
 $menu-item-margin-bottom: 20px;
+$menu-item-border-color: #333;
 
-//positions
-$button-position: 00px;
-
-//media
-//sizes
+//category
+$column-size: 100%;
+$menu-item-paddings: 10px;
+$menu-card-padding-top: $navigation-height;
 $media-column-size: 48%;
+//hidden-menu
+$hidden-menu-background: black;
+$hidden-menu-border-color: white;
+$hidden-menu-hover-color: cadetblue;
+$hidden-menu-color: white;
+$hidden-menu-close-size: 30px;
+$hidden-menu-icon-size: 12px;
+$hidden-menu-paddings: 75px 20px;

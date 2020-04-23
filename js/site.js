@@ -80,18 +80,25 @@ if (menu) {
     order.classList.remove("active");
   });
 
-  //open annotations
-  const annotationButton = menu.querySelector("#annotation-button");
-  annotationButton.addEventListener("click", function (e) {
+  //open login form
+  const loginButton = menu.querySelector("#login-button");
+  loginButton.addEventListener("click", function (e) {
     const target = menu.querySelector(e.currentTarget.dataset.target);
     target.classList.add("active");
-    console.log(target);
   });
 
-  //close basket
-  const annotations = menu.querySelector("#annotation");
-  const closeAnnotationButton = annotations.querySelector(".close button");
+  //close login form
+  const login = menu.querySelector("#login");
+  const closeAnnotationButton = login.querySelector(".close button");
   closeAnnotationButton.addEventListener("click", () => {
-    annotations.classList.remove("active");
+    login.classList.remove("active");
+  });
+
+  //show pizza customization
+  const pizzaAddButtons = menu.querySelectorAll("#pizzas .add-to-basket");
+  pizzaAddButtons.forEach((pizzaButton) => {
+    pizzaButton.addEventListener("click", () => {
+      $("#customize-pizza").modal("show");
+    });
   });
 }
