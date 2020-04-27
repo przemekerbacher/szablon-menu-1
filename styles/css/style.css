@@ -391,15 +391,21 @@ input[type="submit"] {
   background-size: cover;
   min-height: calc(100vh -20px);
   padding: 10px 20px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .menu .navigation {
   position: fixed;
   z-index: 2;
   top: 0;
-  left: 0;
+  left: 50%;
   width: 100%;
+  max-width: 1280px;
   padding: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .menu .navigation .wrapper {
@@ -1310,5 +1316,9 @@ button {
   padding: 0;
   background-color: transparent;
   border-style: none;
+}
+
+body {
+  background-color: #000;
 }
 /*# sourceMappingURL=style.css.map */
