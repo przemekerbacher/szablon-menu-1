@@ -1,50 +1,35 @@
-@media (min-width: 500px) {
-  .menu-card {
-    .alergens {
-      li {
-        flex-basis: 33%;
-      }
+@media (min-width: 700px) {
+  .navigation {
+    .menu-expand {
+      display: none;
     }
   }
-}
-
-@media (min-width: 700px) {
-  .menu-card {
-    flex-direction: row;
-    flex-wrap: nowrap;
+  .alergens {
+    display: block;
   }
-
-  .menu-navigation {
-    position: static;
-    width: 250px;
-    padding: 10px;
-  }
-
   #menu {
     display: block;
   }
 
-  .menu-expand {
-    display: none;
+  .menu-card {
+    flex-direction: row;
   }
 
   .navigation {
-    padding: 10px 50px;
-  }
-}
-
-@media (min-width: 800px) {
-  .menu-card {
-    .menu-item {
-      width: $media-column-size;
+    h1 {
+      display: initial;
     }
   }
+
+  .menu-navigation {
+    margin-right: 20px;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .menu-card {
     .menu-item {
-      width: 30%;
+      width: 50%;
     }
   }
 }

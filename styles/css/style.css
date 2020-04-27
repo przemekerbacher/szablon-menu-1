@@ -361,7 +361,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto Slab", serif;
 }
 
 .hide {
@@ -384,40 +384,51 @@ input[type="submit"] {
 }
 
 .menu {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background-image: url("../../../images/background.jpg");
   background-attachment: fixed;
   background-size: cover;
-  min-height: 100vh;
+  min-height: calc(100vh -20px);
+  padding: 10px 20px;
 }
 
 .menu .navigation {
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
+  padding: 20px;
+}
+
+.menu .navigation .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 1px solid #c87e29;
-  -webkit-box-shadow: -1px 0 4px transparent;
-          box-shadow: -1px 0 4px transparent;
-  height: 100px;
-  padding: 10px;
   background-color: black;
-  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
   color: white;
-  z-index: 2;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 10px 20px;
+}
+
+.menu .navigation h1 {
+  display: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 28px;
+  margin: 0;
+  padding: 0;
 }
 
 .menu .navigation svg {
-  font-size: 50px;
-  margin-right: 10px;
+  font-size: 20px;
   color: white;
 }
 
@@ -434,29 +445,63 @@ input[type="submit"] {
   max-width: 100%;
 }
 
-.menu .navigation .user {
+.menu .navigation .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-left: auto;
+  margin-right: 40px;
+}
+
+.menu .navigation .user {
+  margin-right: 15px;
+}
+
+.menu .navigation .total {
+  position: relative;
+  right: -50%;
+  background-color: #b30908;
+  padding: 2px 4px;
+  border-radius: 5px;
+}
+
+.menu .navigation .user button,
+.menu .navigation .basket button {
+  border-radius: 50%;
+  border: 1px solid white;
+  height: 40px;
+  width: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu .menu-navigation {
-  position: fixed;
-  top: 100px;
-  z-index: 1;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-right: 1px solid #c87e29;
-  width: 100%;
-  max-height: calc(100vh - 100px);
   overflow-y: auto;
   font-size: 25px;
-  text-transform: uppercase;
-  min-width: 250px;
   color: white;
-  max-height: calc(100vh - 100px);
+  min-width: 280px;
   overflow-y: auto;
+  font-weight: bold;
+}
+
+.menu .menu-navigation h1 {
+  text-align: center;
+  font-weight: bold;
+  color: #b30908;
+  margin: 10px;
+  font-size: 40px;
 }
 
 .menu .menu-navigation ul {
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 1px;
   height: 100%;
   list-style-type: none;
   display: -webkit-box;
@@ -472,24 +517,33 @@ input[type="submit"] {
 }
 
 .menu .menu-navigation ul a {
+  white-space: nowrap;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   display: block;
-  padding: 20px 20px;
+  padding: 5px 0px;
   cursor: pointer;
 }
 
 .menu .menu-navigation ul a.active {
-  color: #c87e29;
+  color: #8bcc9a;
+}
+
+.menu .menu-navigation li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu .menu-navigation .icon {
+  max-width: 30px;
 }
 
 .menu .menu-card {
   min-height: 100vh;
   overflow-y: auto;
-  padding-top: 100px;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  padding-top: 95px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -499,37 +553,79 @@ input[type="submit"] {
           flex-direction: column;
 }
 
-.menu .menu-card .menu-item {
+.menu .menu-card .categories {
+  width: 100%;
+  margin-top: 75px;
+}
+
+.menu .menu-card .menu-items {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.menu .menu-card .menu-item {
   width: 100%;
-  max-width: 400px;
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.7);
-  margin-bottom: 20px;
-  border: 1px solid #c87e29;
-  font-size: 30px;
+  padding: 2px;
 }
 
-.menu .menu-card .menu-item .numer {
-  margin-right: 10px;
+.menu .menu-card .menu-item.active .wrapper {
+  background-color: white;
+  border: 1px solid white;
+  color: black;
 }
 
-.menu .menu-card .menu-item .info {
-  margin-right: 10px;
+.menu .menu-card .menu-item.active .price span {
+  color: white;
+  background-color: #b30908;
 }
 
-.menu .menu-card .menu-item .price {
-  margin-left: auto;
-  white-space: nowrap;
+.menu .menu-card .menu-item.active .basket {
+  background-color: #8bcc9a;
 }
 
-.menu .menu-card .menu-item .buy {
-  margin-left: 10px;
+.menu .menu-card .menu-item.active .basket button.add {
+  display: none;
 }
 
-.menu .menu-card .menu-item .buy button {
+.menu .menu-card .menu-item.active .basket button.remove {
+  display: block;
+}
+
+.menu .menu-card .menu-item.active .count button {
+  color: black;
+  border: 1px solid black;
+}
+
+.menu .menu-card .menu-item.active .count button svg {
+  fill: black;
+}
+
+.menu .menu-card .menu-item .wrapper {
+  height: 100%;
+  border: 1px solid #8bcc9a;
+  border-radius: 10px;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  letter-spacing: 1px;
+}
+
+.menu .menu-card .menu-item p {
+  margin: 0;
+}
+
+.menu .menu-card .menu-item .image {
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,110 +635,142 @@ input[type="submit"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  justify-self: flex-end;
-  margin-left: 10px;
-  height: 75px;
-  width: 75px;
-  border-style: none;
+}
+
+.menu .menu-card .menu-item .image img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+.menu .menu-card .menu-item .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  width: 100%;
+}
+
+.menu .menu-card .menu-item .info,
+.menu .menu-card .menu-item .buy {
+  width: 100%;
+  padding: 5px;
+}
+
+.menu .menu-card .menu-item .buy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu .menu-card .menu-item .price {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu .menu-card .menu-item .basket {
+  font-size: 25px;
+  padding: 5px 10px;
   background-color: #b30908;
   color: white;
-  font-size: 14px;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  border-radius: 0 5px 5px 0px;
 }
 
-.menu .menu-card p {
-  margin: 0;
-}
-
-.menu .menu-card .wrapper {
-  position: relative;
-  width: 100%;
-  background-color: transparent;
-  padding: 20px;
-}
-
-.menu .menu-card h2 {
+.menu .menu-card .menu-item .basket button.add {
+  display: block;
   color: white;
-  font-size: 40px;
-  margin-bottom: 20px;
-  margin-top: 0;
-  text-transform: uppercase;
 }
 
-.menu .menu-card .wrapper {
-  max-height: calc(100vh - 100px);
-  overflow-y: auto;
+.menu .menu-card .menu-item .basket button.remove {
+  display: none;
+  color: white;
 }
 
-.menu .menu-card .categories {
+.menu .menu-card .menu-item .price span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  justify-items: space-between;
-}
-
-.menu .menu-card .categories {
-  padding-top: 0;
-}
-
-.menu .menu-card .category {
-  width: 100%;
-}
-
-.menu .menu-card .menu-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.menu .menu-card .menu-item {
-  margin: 0 auto;
-  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 5px 10px;
+  background-color: #8bcc9a;
+  border-radius: 5px 0px 0px 5px;
+}
+
+.menu .menu-card .menu-item .count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-bottom: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.menu .menu-card .image {
-  width: 100%;
-  overflow: hidden;
-  border-radius: 5px;
+.menu .menu-card .menu-item .count span {
+  margin: 0 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #8bcc9a;
 }
 
-.menu .menu-card .image img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
+.menu .menu-card .menu-item .count .add {
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 
-.menu .menu-card .info {
-  width: 100%;
-  margin: 20px 0;
+.menu .menu-card .menu-item .count .remove {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
-.menu .menu-card .details {
-  color: #ccc;
-  font-size: 25px;
+.menu .menu-card .menu-item .count span {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.menu .menu-card .menu-item .count button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  height: 25px;
+  width: 25px;
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.menu .menu-card .menu-item .count button svg {
+  fill: white;
+}
+
+.menu .menu-card .menu-item .details {
+  font-family: "Open Sans", sans-serif;
 }
 
 .menu .menu-card .category {
@@ -675,12 +803,23 @@ input[type="submit"] {
 }
 
 .menu .alergens {
+  display: none;
+  text-align: left;
+  margin-top: 0px;
   font-size: 20px;
-  margin-top: 100px;
+}
+
+.menu .alergens button {
+  margin-bottom: 20px;
+}
+
+.menu .alergens p {
+  margin: 0;
 }
 
 .menu .alergens svg {
-  margin-right: 10px;
+  margin-left: 5px;
+  font-size: 18px;
 }
 
 .menu .alergens button {
@@ -688,6 +827,12 @@ input[type="submit"] {
   background-color: transparent;
   color: white;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu .alergens ul {
@@ -702,6 +847,8 @@ input[type="submit"] {
 .menu .alergens li {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+  font-size: 20px;
+  font-weight: normal;
 }
 
 .menu .order {
@@ -724,6 +871,10 @@ input[type="submit"] {
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
   color: white;
+}
+
+.menu .order .container {
+  max-width: 600px;
 }
 
 .menu .order.active {
@@ -852,75 +1003,10 @@ input[type="submit"] {
   text-decoration: none;
 }
 
-.menu .annotations {
-  height: 100vh;
-  width: 100vw;
-  top: -100%;
-  position: fixed;
-  left: 0;
-  background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 75px 20px;
-  z-index: 2;
-  overflow: auto;
-  -webkit-transition: top 0.3s;
-  transition: top 0.3s;
-  justify-items: stretch;
-  color: white;
-}
-
-.menu .annotations.active {
-  top: 0;
-}
-
-.menu .annotations .close {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  padding: 0px;
-  cursor: pointer;
-}
-
-.menu .annotations .close svg {
-  color: white;
-}
-
-.menu .annotations h3 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.menu .annotations .content textarea {
-  width: 100%;
-}
-
-.menu .annotations .save-button {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.menu .annotations button.save {
-  padding: 10px 20px;
-  border: 1px solid white;
-  color: white;
-}
-
 .menu .customize-pizza {
-  background-color: white;
-  background-color: black;
   max-width: 800px;
   padding: 20px;
+  background-color: black;
   color: white;
 }
 
@@ -941,15 +1027,15 @@ input[type="submit"] {
 }
 
 .menu .customize-pizza .category {
-  border: 1px solid #ddd;
   padding: 10px 20px;
+  border: 1px solid #ddd;
 }
 
 .menu .customize-pizza .size {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -1025,15 +1111,15 @@ input[type="submit"] {
 
 .menu .customize-pizza .buttons .cancel {
   margin-right: 10px;
+  padding: 10px 20px;
   background-color: #b60609;
   color: white;
-  padding: 10px 20px;
 }
 
 .menu .customize-pizza .buttons .save {
+  padding: 10px 20px;
   background-color: green;
   color: white;
-  padding: 10px 20px;
 }
 
 .menu .customize-pizza .changes {
@@ -1043,13 +1129,13 @@ input[type="submit"] {
 
 .menu .customize-pizza .amount {
   width: 100%;
+  margin: 20px 0;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 20px 0;
 }
 
 .menu .customize-pizza .amount input {
@@ -1072,57 +1158,43 @@ input[type="submit"] {
   border: 1px solid white;
 }
 
-@media (min-width: 500px) {
-  .menu .menu-card .alergens li {
-    -ms-flex-preferred-size: 33%;
-        flex-basis: 33%;
-  }
-}
-
 @media (min-width: 700px) {
+  .menu .navigation .menu-expand {
+    display: none;
+  }
+  .menu .alergens {
+    display: block;
+  }
+  .menu #menu {
+    display: block;
+  }
   .menu .menu-card {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+  }
+  .menu .navigation h1 {
+    display: initial;
   }
   .menu .menu-navigation {
-    position: static;
-    width: 250px;
-    padding: 10px;
-  }
-  .menu #menu {
-    display: block;
-  }
-  .menu .menu-expand {
-    display: none;
-  }
-  .menu .navigation {
-    padding: 10px 50px;
+    margin-right: 20px;
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .menu .menu-card .menu-item {
-    width: 48%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .menu .menu-card .menu-item {
-    width: 30%;
+    width: 50%;
   }
 }
 
 .menu .login {
+  z-index: 2;
+  position: fixed;
   height: 100vh;
   width: 100vw;
-  top: -100%;
-  background-color: black;
-  position: fixed;
   left: 0;
+  top: -100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1131,11 +1203,11 @@ input[type="submit"] {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 75px 20px;
-  z-index: 2;
-  overflow: auto;
+  background-color: black;
+  color: white;
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
-  color: white;
+  overflow: auto;
 }
 
 .menu .login.active {
@@ -1149,9 +1221,9 @@ input[type="submit"] {
 
 .menu .login .close {
   position: absolute;
+  padding: 0px;
   top: 30px;
   right: 30px;
-  padding: 0px;
   cursor: pointer;
 }
 
@@ -1173,9 +1245,9 @@ input[type="submit"] {
 
 .menu .login .buttons .cancel {
   margin-right: 10px;
+  padding: 10px 20px;
   background-color: #b60609;
   color: white;
-  padding: 10px 20px;
 }
 
 .menu .login .buttons .save {
@@ -1188,6 +1260,49 @@ input[type="submit"] {
   width: 100%;
   text-align: right;
   display: block;
+}
+
+.menu .app {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.menu .app .content {
+  background-color: #8bcc9a;
+  padding: 10px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .app .image {
+  max-width: 170px;
+}
+
+.menu .app img {
+  max-width: 100%;
+  background-color: #b60609;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.menu .app p {
+  margin: 0;
+}
+
+.menu .app .text {
+  margin: 0 10px;
+  text-align: justify;
+  letter-spacing: 1px;
+}
+
+.menu .app .decoration {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 button {

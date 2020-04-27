@@ -101,4 +101,53 @@ if (menu) {
       $("#customize-pizza").modal("show");
     });
   });
+
+  //navigate to app page
+  const appElement = menu.querySelector(".app");
+  appElement.addEventListener("click", function (e) {
+    window.location.href = e.currentTarget.dataset.url;
+  });
+
+  //handle change item count
+  const menuItems = menu.querySelectorAll(".menu-item");
+  menuItems.forEach((menuItem) => {
+    const spanElement = menuItem.querySelector(".count span");
+    let spanValue = parseInt(spanElement.innerHTML);
+
+    const operation = (type) => {
+      if (type === "add") {
+        spanElement.innerHTML = ++spanValue;
+      }
+      if (type === "remove") {
+        if (spanValue > 0) spanElement.innerHTML = --spanValue;
+      }
+    };
+    menuItem.querySelector(".count .add").addEventListener("click", () => {
+      operation("add");
+    });
+
+    menuItem.querySelector(".count .remove").addEventListener("click", () => {
+      operation("remove");
+    });
+  });
+
+  menuItems.forEach((menuItem) => {
+    const clickables = menuItem.querySelectorAll(".image, .price, .info");
+    clickables.forEach((clickable) => {
+      clickable.addEventListener("click", (e) => {
+        // addToBasket();
+      });
+    });
+  });
+
+  const customizable = menu.querySelector(".customizable");
+  const customizeButtons = customizable.querySelectorAll(
+    ".menu-item .basket .add"
+  );
+
+  customizeButtons.forEach((customizeButton) => {
+    customizeButton.addEventListener("click", () => {
+      $("#customize-pizza").modal("show");
+    });
+  });
 }

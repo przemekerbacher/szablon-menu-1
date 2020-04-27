@@ -13,6 +13,10 @@
   transition: top 0.3s;
   color: $hidden-menu-color;
 
+  .container {
+    max-width: 600px;
+  }
+
   &.active {
     top: 0;
   }

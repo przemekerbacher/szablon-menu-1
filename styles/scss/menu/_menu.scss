@@ -5,14 +5,19 @@
   @import "menu-card";
   @import "alergens";
   @import "order";
-  @import "annotations";
   @import "customize-pizza";
   @import "media";
   @import "login";
+  @import "app";
+
+  box-sizing: border-box;
 
   background-image: url("../../../images/background.jpg");
   background-attachment: fixed;
   background-size: cover;
-  min-height: 100vh;
+  min-height: calc(100vh -20px);
+
+  padding: 10px 20px;
+
   // background-color: black;
 }

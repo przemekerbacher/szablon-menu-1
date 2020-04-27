@@ -1,9 +1,11 @@
 //colors
 $green: #77aa03;
+$green2: rgb(139, 204, 154);
 $gold: #c87e29;
 $red: #b30908;
 
 $border-color: $gold;
+$border-color: #444;
 $small-font-color: #ccc;
 
 //navigation
@@ -13,9 +15,13 @@ $navigation-border-color: white;
 $navigation-box-shadow: -1px 0 4px transparent;
 $navigation-color: white;
 $navigation-icon-color: white;
-$navigation-height: 100px;
+$navigation-logo-size: 75px;
+$navigation-vertical-padding: 10px;
+$navigation-height: calc(
+  #{$navigation-logo-size + 2 * #{$navigation-vertical-padding}}
+);
 $navigation-paddings: 10px;
-$navigation-icon-size: 50px;
+$navigation-icon-size: 20px;
 
 //menu-card
 $background-color: black;

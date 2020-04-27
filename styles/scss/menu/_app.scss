@@ -1,0 +1,37 @@
+.app {
+  font-size: 14px;
+  cursor: pointer;
+
+  .content {
+    background-color: $green2;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .image {
+    max-width: 170px;
+  }
+
+  img {
+    max-width: 100%;
+    background-color: $red;
+    border-radius: 10px;
+    padding: 10px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .text {
+    margin: 0 10px;
+    text-align: justify;
+    letter-spacing: 1px;
+  }
+
+  .decoration {
+    align-self: flex-end;
+  }
+}

@@ -1,9 +1,22 @@
 .alergens {
+  display: none;
   $font-color: $regular-font-color;
+  text-align: left;
+
+  margin-top: 0px;
   font-size: 20px;
-  margin-top: 100px;
+
+  button {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin: 0;
+  }
+
   svg {
-    margin-right: 10px;
+    margin-left: 5px;
+    font-size: 18px;
   }
 
   button {
@@ -11,6 +24,9 @@
     background-color: transparent;
     color: $font-color;
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
   }
 
   ul {
@@ -21,5 +37,7 @@
 
   li {
     flex-basis: 100%;
+    font-size: 20px;
+    font-weight: normal;
   }
 }
