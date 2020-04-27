@@ -6,8 +6,11 @@
   display: flex;
   flex-direction: column;
 
+  .wrapper {
+    max-width: 74.49%;
+  }
+
   .categories {
-    width: 100%;
     margin-top: 75px;
   }
 
@@ -21,6 +24,7 @@
   @import "menu-item";
 
   .category {
+    width: 100%;
     display: none;
     animation: animatedOpacity 0.5s both reverse;
 

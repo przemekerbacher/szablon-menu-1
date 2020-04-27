@@ -492,7 +492,7 @@ input[type="submit"] {
   overflow-y: auto;
   font-size: 25px;
   color: white;
-  min-width: 280px;
+  min-width: 25.51%;
   overflow-y: auto;
   font-weight: bold;
 }
@@ -501,7 +501,7 @@ input[type="submit"] {
   text-align: center;
   font-weight: bold;
   color: #b30908;
-  margin: 10px;
+  margin: 20px 0;
   font-size: 40px;
 }
 
@@ -559,8 +559,11 @@ input[type="submit"] {
           flex-direction: column;
 }
 
+.menu .menu-card .wrapper {
+  max-width: 74.49%;
+}
+
 .menu .menu-card .categories {
-  width: 100%;
   margin-top: 75px;
 }
 
@@ -618,6 +621,8 @@ input[type="submit"] {
   border: 1px solid #8bcc9a;
   border-radius: 10px;
   padding: 5px;
+  width: 100%;
+  max-width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -641,6 +646,7 @@ input[type="submit"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-width: 37.59%;
 }
 
 .menu .menu-card .menu-item .image img {
@@ -656,7 +662,7 @@ input[type="submit"] {
       flex-wrap: wrap;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  width: 100%;
+  max-width: 62.41%;
 }
 
 .menu .menu-card .menu-item .info,
@@ -780,6 +786,7 @@ input[type="submit"] {
 }
 
 .menu .menu-card .category {
+  width: 100%;
   display: none;
   animation: animatedOpacity 0.5s both reverse;
 }
@@ -1188,7 +1195,7 @@ input[type="submit"] {
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1200px) {
   .menu .menu-card .menu-item {
     width: 50%;
   }
