@@ -18,21 +18,32 @@
     padding: $navigation-vertical-padding 20px;
   }
 
-  h1 {
-    display: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 28px;
-    margin: 0;
-    padding: 0;
-  }
+  .title {
+    position: relative;
+    h1 {
+      // display: none;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 28px;
+      margin: 0;
+      padding: 0;
+    }
 
-  svg {
-    font-size: $navigation-icon-size;
-    color: white;
+    .dec-1,
+    .dec-2 {
+      position: absolute;
+      color: $green2;
+    }
 
-    &:hover {
-      color: $gold;
+    .dec-1 {
+      top: -13px;
+      right: -18px;
+    }
+
+    .dec-2 {
+      bottom: -20px;
+      left: -20px;
+      transform: rotate(180deg);
     }
   }
 
@@ -48,6 +59,14 @@
     display: flex;
     margin-left: auto;
     margin-right: 40px;
+    svg {
+      font-size: $navigation-icon-size;
+      color: white;
+
+      &:hover {
+        color: $gold;
+      }
+    }
   }
 
   .user {
