@@ -1,10 +1,10 @@
 .alergens {
   display: none;
-  $font-color: $regular-font-color;
+  $font-color: $alergens-font-color;
   text-align: left;
 
   margin-top: 0px;
-  font-size: 20px;
+  font-size: $alergens-font-size;
 
   button {
     margin-bottom: 20px;
@@ -16,7 +16,7 @@
 
   svg {
     margin-left: 5px;
-    font-size: 18px;
+    font-size: $alergens-font-size;
   }
 
   button {
@@ -37,7 +37,7 @@
 
   li {
     flex-basis: 100%;
-    font-size: 20px;
+    font-size: $alergens-font-size;
     font-weight: normal;
   }
 }

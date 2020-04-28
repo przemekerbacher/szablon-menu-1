@@ -2,18 +2,29 @@
   height: 100vh;
   width: 100vw;
   top: -100%;
-  background-color: rgba(0, 0, 0, 1);
   position: fixed;
   left: 0;
   display: flex;
   flex-direction: column;
-  padding: $hidden-menu-paddings;
   z-index: 2;
   overflow: auto;
   transition: top 0.3s;
-  color: $hidden-menu-color;
+  color: $order-text-color;
+
+  .wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $max-width;
+    // background-image: url("../../images/background.jpg");
+    background-color: $order-background-color;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+  }
 
   .container {
+    margin-top: 150px;
     max-width: 600px;
   }
 
@@ -28,13 +39,13 @@
     cursor: pointer;
 
     svg {
-      color: white;
+      color: $order-text-color;
     }
   }
 
   h3 {
     text-align: center;
-    margin-bottom: $h2-margin-botton;
+    margin-bottom: 20px;
   }
 
   .order-item {
@@ -113,10 +124,10 @@
   a,
   button.save {
     padding: 10px 20px;
-    border: 1px solid $hidden-menu-border-color;
+    border: 1px solid $order-text-color;
     display: block;
     text-align: center;
-    color: $hidden-menu-border-color;
+    color: $order-text-color;
     margin-left: auto;
   }
   a {

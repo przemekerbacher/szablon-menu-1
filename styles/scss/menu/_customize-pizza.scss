@@ -1,21 +1,16 @@
 .customize-pizza {
-  $font-color: $regular-font-color;
-  $font-color: white;
-  $active-background-color: green;
-  $red: #b60609;
-
   max-width: 800px;
   padding: 20px;
 
-  background-color: rgba(0, 0, 0, 1);
-  color: $font-color;
+  background-color: $cusotmize-pizza-background-color;
+  color: $cusotmize-pizza-color;
 
   svg {
-    color: $font-color;
+    color: $cusotmize-pizza-color;
   }
 
   button {
-    color: $font-color;
+    color: $cusotmize-pizza-color;
   }
 
   .header {
@@ -43,8 +38,8 @@
     text-align: center;
 
     &.active {
-      background-color: $active-background-color;
-      color: $regular-font-color;
+      background-color: $cusotmize-pizza-size-background-color;
+      color: white;
     }
   }
 
@@ -79,6 +74,13 @@
         margin-left: 10px;
       }
     }
+
+    .plus[disabled],
+    .minus[disabled] {
+      svg {
+        color: #ddd;
+      }
+    }
   }
 
   .price-summary {
@@ -104,7 +106,7 @@
     }
     .save {
       padding: 10px 20px;
-      background-color: $active-background-color;
+      background-color: $cusotmize-pizza-size-background-color;
       color: white;
     }
   }
@@ -133,7 +135,7 @@
       justify-content: center;
       align-items: center;
 
-      border: 1px solid $regular-font-color;
+      border: 1px solid white;
     }
   }
 }

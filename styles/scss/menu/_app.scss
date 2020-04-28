@@ -3,7 +3,7 @@
   cursor: pointer;
 
   .content {
-    background-color: $green2;
+    background-color: $app-background-color;
     padding: 10px;
     border-radius: 10px;
     display: flex;
@@ -16,7 +16,7 @@
 
   img {
     max-width: 100%;
-    background-color: $red;
+    background-color: $app-image-background-color;
     border-radius: 10px;
     padding: 10px;
   }

@@ -1,14 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&family=Roboto+Slab&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto&family=Roboto+Slab&display=swap");
-//fonts
-$font-1: "Open Sans", sans-serif;
-$font-2: "Roboto", sans-serif;
-$font-3: "Roboto Slab", serif;
-$font-4: "Open Sans", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Slab&family=Roboto:wght@100;400&display=swap");
 
 html {
-  font-family: $font-4;
+  font-family: "roboto", sans-serif;
 }
 
 h1,
@@ -17,7 +10,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $font-3;
+  font-family: "Roboto slab", serif;
 }
 
 .hide {

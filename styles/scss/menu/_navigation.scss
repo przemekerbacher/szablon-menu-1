@@ -1,30 +1,41 @@
 .navigation {
+  //fixed position
   position: fixed;
   z-index: 2;
   top: 0;
+
+  //make it center
   left: 50%;
-  width: 100%;
-  max-width: 1280px;
-  padding: 20px;
   transform: translateX(-50%);
 
+  //width limit
+  max-width: 1280px;
+  width: 100%;
+
+  padding: 20px;
+
   .wrapper {
+    border-radius: 10px;
+
     display: flex;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 1);
-    border-radius: 10px;
-    color: $navigation-color;
     align-items: center;
+
+    background-color: rgba(0, 0, 0, 1);
+    color: $navigation-color;
+
     padding: $navigation-vertical-padding 20px;
   }
 
   .title {
+    font-family: $navigation-font-family;
     position: relative;
+    display: none;
+
     h1 {
-      // display: none;
       font-weight: bold;
       letter-spacing: 1px;
-      font-size: 28px;
+      font-size: $navigation-font-size;
       margin: 0;
       padding: 0;
     }
@@ -50,6 +61,7 @@
   .logo {
     margin-right: auto;
     max-width: $navigation-logo-size;
+
     img {
       max-width: 100%;
     }
@@ -59,6 +71,7 @@
     display: flex;
     margin-left: auto;
     margin-right: 40px;
+
     svg {
       font-size: $navigation-icon-size;
       color: white;
@@ -76,19 +89,19 @@
   .total {
     position: relative;
     right: -50%;
-
-    background-color: $red;
     padding: 2px 4px;
     border-radius: 5px;
+
+    background-color: $red;
   }
 
   .user,
   .basket {
     button {
-      border-radius: 50%;
-      border: 1px solid white;
       height: 40px;
       width: 40px;
+      border-radius: 50%;
+      border: 1px solid white;
 
       display: flex;
       justify-content: center;

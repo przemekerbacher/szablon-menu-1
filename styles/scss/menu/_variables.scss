@@ -1,3 +1,12 @@
+//global
+$margins: 20px;
+$max-width: 1280px;
+
+//fonts
+$font-1: "Open Sans", sans-serif;
+$font-2: "Roboto", sans-serif;
+$font-3: "Roboto Slab", serif;
+
 //colors
 $green: #77aa03;
 $green2: rgb(139, 204, 154);
@@ -9,46 +18,85 @@ $border-color: #444;
 $small-font-color: #ccc;
 
 //navigation
-$navigation-color: white;
 $navigation-background-color: black;
-$navigation-border-color: white;
-$navigation-box-shadow: -1px 0 4px transparent;
-$navigation-color: white;
-$navigation-icon-color: white;
-$navigation-logo-size: 75px;
-$navigation-vertical-padding: 10px;
-$navigation-height: calc(
-  #{$navigation-logo-size + 2 * #{$navigation-vertical-padding}}
-);
-$navigation-paddings: 10px;
-$navigation-icon-size: 20px;
 
-//menu-card
-$background-color: black;
-$regular-font-color: white;
-$header-font-color: white;
-$wrapper-color: transparent;
-$header-font-size: 40px;
-$regular-font-size: 30px;
-$small-font-size: 25px;
-$wrapper-vertical-padding: 50px;
-$h2-margin-botton: 20px;
+$navigation-hover-color: $green2;
+
+$navigation-color: white;
+$navigation-font-size: 28px;
+$navigation-font-family: $font-3;
+
+$navigation-icon-size: 20px;
+$navigation-icon-color: white;
+
+$navigation-logo-size: 75px;
+
+$navigation-vertical-padding: 10px;
 
 //menu-item
-$buy-button-color: white;
-$buy-button-background-color: $green;
-$buy-button-background-color: $red;
-$buy-button-size: 75px;
-$buy-button-font-size: 14px;
-$menu-item-background: black;
-$menu-item-margin-bottom: 20px;
-$menu-item-border-color: #333;
+$menu-item-name-font-size: 20px;
+$menu-item-name-font-color: white;
+$menu-item-name-font-family: $font-3;
 
-//category
-$column-size: 100%;
-$menu-item-paddings: 10px;
-$menu-card-padding-top: $navigation-height;
-$media-column-size: 48%;
+$menu-item-alergen-font-size: 10px;
+$menu-item-alergen-size: 30px;
+$menu-item-alergen-family: $font-1;
+
+$menu-item-details-font-size: 20px;
+$menu-item-details-font-color: #ddd;
+$menu-item-details-font-family: $font-1;
+
+$menu-item-border-color: $green2;
+$menu-item-space-between-items: 2px;
+
+$menu-item-content-wrapper-padding: 5px;
+
+$menu-item-price-color: white;
+$menu-item-price-background-color: $green2;
+
+$menu-item-basket-color: white;
+$menu-item-basket-background-color: $red;
+
+$menu-item-count-color: $green2;
+
+//menu.active
+$menu-item-active-background-color: white;
+$menu-item-active-border-color: white;
+
+$menu-item-active-name-font-color: black;
+
+$menu-item-active-price-color: white;
+$menu-item-active-price-background-color: $red;
+
+$menu-item-active-basket-color: white;
+$menu-item-active-basket-background-color: $green2;
+
+//menu-navigation
+$menu-navigation-font-size: 25px;
+$menu-navigation-color: white;
+$menu-active-navigation-color: $green2;
+$menu-navigation-font-family: $font-3;
+
+$menu-navigation-header-color: $red;
+$menu-navigation-header-font-size: 40px;
+$menu-navigation-header-font-family: $font-3;
+
+//alergens
+$alergens-font-color: white;
+$alergens-font-size: 18px;
+
+//login
+$login-background-color: black;
+$login-font-color: white;
+$login-cancel-background-color: $red;
+$login-cancel-color: white;
+$login-save-background-color: $green2;
+$login-save-color: white;
+
+//order
+$order-background-color: white;
+$order-text-color: black;
+
 //hidden-menu
 $hidden-menu-background: black;
 $hidden-menu-border-color: white;
@@ -56,4 +104,14 @@ $hidden-menu-hover-color: cadetblue;
 $hidden-menu-color: white;
 $hidden-menu-close-size: 30px;
 $hidden-menu-icon-size: 12px;
-$hidden-menu-paddings: 75px 20px;
+$hidden-menu-paddings: 95px 20px;
+
+//app
+$app-background-color: $green2;
+$app-image-background-color: $red;
+
+//customize-pizza
+$cusotmize-pizza-background-color: white;
+$cusotmize-pizza-color: black;
+$cusotmize-pizza-size-background-color: $green2;
+$cusotmize-pizza-size-color: white;

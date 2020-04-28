@@ -150,4 +150,171 @@ if (menu) {
       $("#customize-pizza").modal("show");
     });
   });
+
+  //customize-pizza
+  class Group {
+    constructor(groupId) {
+      this.id = groupId;
+      this.groupElement = document.querySelector(groupId);
+      this.getValues();
+      this.addEventListeners();
+      this.toggleAllButtonsEnabled();
+      this.event = new CustomEvent("update-total", { total: this.total });
+    }
+
+    total = 0;
+    max = 1;
+    min = 0;
+    items = [];
+    changes = [];
+
+    getItems = () => {
+      const addons = this.groupElement.querySelectorAll(".addon");
+      addons.forEach((addon) => {
+        const { name, price, max, min, current } = addon.dataset;
+        this.items = [...this.items, { name, price, max, min, current }];
+      });
+    };
+
+    getValues = () => {
+      this.getItems();
+
+      //getTotal
+      this.updateTotal();
+
+      //getMax
+      this.max = parseInt(this.groupElement.dataset.max);
+
+      //getMin
+      this.min = parseInt(this.groupElement.dataset.min);
+    };
+
+    toggleAllButtonsEnabled = () => {
+      const buttons = this.groupElement.querySelectorAll(".edit button");
+      buttons.forEach((button) => {
+        const { addon: name, operation } = button.dataset;
+        const currentItem = this.items.find((i) => i.name === name);
+        const current = parseInt(currentItem.current);
+        const max = parseInt(currentItem.max);
+        const min = parseInt(currentItem.min);
+
+        if (operation === "add") {
+          if (current === max || this.total === this.max) {
+            button.disabled = true;
+          } else {
+            button.disabled = false;
+          }
+        }
+
+        if (operation === "remove") {
+          if (current === min || this.total === this.min) {
+            button.disabled = true;
+          } else {
+            button.disabled = false;
+          }
+        }
+      });
+    };
+
+    updateTotal = () => {
+      this.total = 0;
+      this.items.forEach((item) => {
+        this.total += parseInt(item.current);
+      });
+
+      window.dispatchEvent(
+        new CustomEvent("update-total", {
+          detail: { total: this.total, groupId: this.id },
+          bubbles: true,
+        })
+      );
+    };
+
+    increaseItemCount = (name) => {
+      const currentItem = this.items.find((i) => i.name === name);
+
+      currentItem.current++;
+
+      this.updateAddon(name);
+    };
+
+    decreaseItemCount = (name) => {
+      const currentItem = this.items.find((i) => i.name === name);
+
+      currentItem.current--;
+
+      this.updateAddon(name);
+    };
+
+    updateAddon = (name) => {
+      const addonElement = this.groupElement.querySelector(
+        `.addon[data-name="${name}"]`
+      );
+      const currentItem = this.items.find((i) => i.name === name);
+      addonElement.dataset.current = currentItem.current;
+      addonElement.querySelector(".count").innerText = currentItem.current;
+    };
+
+    addEventListeners() {
+      const addonButtons = this.groupElement.querySelectorAll(".edit button");
+      addonButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          const { addon, operation } = e.currentTarget.dataset;
+          if (operation === "add") this.increaseItemCount(addon);
+          if (operation === "remove") this.decreaseItemCount(addon);
+
+          this.updateTotal();
+          this.toggleAllButtonsEnabled();
+        });
+      });
+    }
+  }
+
+  //Create groups
+  let groups = [];
+  const addonsGroups = menu.querySelectorAll(".addons");
+  addonsGroups.forEach((addonsGroup) => {
+    const id = addonsGroup.id;
+    const group = new Group(`#${id}`);
+    groups.push(group);
+  });
+
+  window.addEventListener("update-total", (e) => {
+    e.currentTarget.innerHtml = e.detail.total;
+    const updateTarget = menu.querySelector(
+      `button[data-target="${e.detail.groupId}"] .total`
+    );
+    updateTarget.innerHTML = e.detail.total;
+  });
+
+  const sizeButtons = menu.querySelectorAll(".size-button");
+  sizeButtons.forEach((sizeButton) => {
+    sizeButton.addEventListener("click", () => {
+      moveActiveClass(sizeButton, sizeButtons);
+    });
+  });
+
+  const customizePizzeAmountButton = menu.querySelectorAll(
+    "#customize-pizza .amount button"
+  );
+
+  customizePizzeAmountButton.forEach((button) => {
+    button.addEventListener("click", () => {
+      const target = document.querySelector(button.dataset.target);
+      const { operation } = button.dataset;
+
+      if (operation === "add") {
+        let value = parseInt(target.value);
+        target.value = ++value;
+      }
+
+      if (operation === "remove") {
+        let value = parseInt(target.value);
+
+        if (value > 0) {
+          target.value = --value;
+        }
+      }
+    });
+  });
 }
