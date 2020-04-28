@@ -31,7 +31,6 @@
     letter-spacing: 1px;
 
     a {
-      white-space: nowrap;
       flex-grow: 1;
       display: block;
       padding: 5px 0px;
@@ -45,9 +44,14 @@
 
   li {
     display: flex;
+    align-items: center;
   }
 
   .icon {
-    max-width: 30px;
+    max-width: 40px;
+    margin-right: 5px;
+    img {
+      max-width: 100%;
+    }
   }
 }

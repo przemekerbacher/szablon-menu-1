@@ -18,6 +18,10 @@
 
   .menu-card {
     flex-direction: row;
+
+    .wrapper {
+      max-width: 74.49%;
+    }
   }
 
   .navigation {
@@ -29,12 +33,22 @@
   .menu-navigation {
     margin-right: 20px;
   }
+
+  .menu-expand {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
   .menu-card {
     .menu-item {
       width: 50%;
+    }
+  }
+
+  .menu-navigation {
+    .app .content {
+      flex-wrap: nowrap;
     }
   }
 }

@@ -6,10 +6,6 @@
   margin-top: 0px;
   font-size: $alergens-font-size;
 
-  button {
-    margin-bottom: 20px;
-  }
-
   p {
     margin: 0;
   }
@@ -25,8 +21,12 @@
     color: $font-color;
     cursor: pointer;
 
+    margin-bottom: 20px;
+
     display: flex;
     align-items: center;
+
+    text-align: left;
   }
 
   ul {

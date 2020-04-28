@@ -456,7 +456,7 @@ input[type="submit"] {
 
 .menu .navigation .logo {
   margin-right: auto;
-  max-width: 75px;
+  max-width: 120px;
 }
 
 .menu .navigation .logo img {
@@ -509,6 +509,14 @@ input[type="submit"] {
           align-items: center;
 }
 
+.menu .navigation .menu-expand {
+  font-size: 20px;
+}
+
+.menu .navigation .menu-expand svg {
+  color: white;
+}
+
 .menu .menu-navigation {
   overflow-y: auto;
   min-width: 25.51%;
@@ -544,7 +552,6 @@ input[type="submit"] {
 }
 
 .menu .menu-navigation ul a {
-  white-space: nowrap;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -561,16 +568,24 @@ input[type="submit"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .menu .menu-navigation .icon {
-  max-width: 30px;
+  max-width: 40px;
+  margin-right: 5px;
+}
+
+.menu .menu-navigation .icon img {
+  max-width: 100%;
 }
 
 .menu .menu-card {
   min-height: 100vh;
   overflow-y: auto;
-  padding-top: 95px;
+  margin-top: calc( 140px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -581,7 +596,7 @@ input[type="submit"] {
 }
 
 .menu .menu-card .wrapper {
-  max-width: 74.49%;
+  width: 100%;
 }
 
 .menu .menu-card .categories {
@@ -606,8 +621,8 @@ input[type="submit"] {
 }
 
 .menu .menu-card .menu-item.active .wrapper {
-  background-color: white;
-  border: 1px solid white;
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
 }
 
 .menu .menu-card .menu-item.active .name,
@@ -729,6 +744,7 @@ input[type="submit"] {
 }
 
 .menu .menu-card .menu-item .price {
+  margin-top: 5px;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -777,6 +793,7 @@ input[type="submit"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 5px;
 }
 
 .menu .menu-card .menu-item .count span {
@@ -878,10 +895,6 @@ input[type="submit"] {
   font-size: 18px;
 }
 
-.menu .alergens button {
-  margin-bottom: 20px;
-}
-
 .menu .alergens p {
   margin: 0;
 }
@@ -896,12 +909,14 @@ input[type="submit"] {
   background-color: transparent;
   color: white;
   cursor: pointer;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: left;
 }
 
 .menu .alergens ul {
@@ -1266,17 +1281,27 @@ input[type="submit"] {
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  .menu .menu-card .wrapper {
+    max-width: 74.49%;
+  }
   .menu .navigation h1 {
     display: initial;
   }
   .menu .menu-navigation {
     margin-right: 20px;
   }
+  .menu .menu-expand {
+    display: none;
+  }
 }
 
 @media (min-width: 1200px) {
   .menu .menu-card .menu-item {
     width: 50%;
+  }
+  .menu .menu-navigation .app .content {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 
@@ -1375,13 +1400,19 @@ input[type="submit"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .menu .app .image {
-  max-width: 170px;
+  max-width: 140px;
+  min-width: 100px;
 }
 
 .menu .app img {
@@ -1397,7 +1428,6 @@ input[type="submit"] {
 
 .menu .app .text {
   margin: 0 10px;
-  text-align: justify;
   letter-spacing: 1px;
 }
 

@@ -148,6 +148,11 @@ if (menu) {
   customizeButtons.forEach((customizeButton) => {
     customizeButton.addEventListener("click", () => {
       $("#customize-pizza").modal("show");
+      // const title = ;
+      // const count;
+
+      // const titleBox;
+      // const countBox;
     });
   });
 
@@ -159,14 +164,13 @@ if (menu) {
       this.getValues();
       this.addEventListeners();
       this.toggleAllButtonsEnabled();
-      this.event = new CustomEvent("update-total", { total: this.total });
     }
 
     total = 0;
     max = 1;
     min = 0;
     items = [];
-    changes = [];
+    currentAddons = [];
 
     getItems = () => {
       const addons = this.groupElement.querySelectorAll(".addon");
@@ -174,6 +178,23 @@ if (menu) {
         const { name, price, max, min, current } = addon.dataset;
         this.items = [...this.items, { name, price, max, min, current }];
       });
+    };
+
+    updateCurrentAddons = () => {
+      this.currentAddons = [];
+
+      this.items.forEach((item) => {
+        if (item.current > 0) {
+          this.currentAddons.push(item);
+        }
+      });
+
+      window.dispatchEvent(
+        new CustomEvent("update-current-addons", {
+          detail: { currentAddons: this.currentAddons, groupId: this.id },
+          bubbles: true,
+        })
+      );
     };
 
     getValues = () => {
@@ -187,6 +208,9 @@ if (menu) {
 
       //getMin
       this.min = parseInt(this.groupElement.dataset.min);
+
+      //getCurrentAddons
+      this.updateCurrentAddons();
     };
 
     toggleAllButtonsEnabled = () => {
@@ -253,6 +277,8 @@ if (menu) {
       const currentItem = this.items.find((i) => i.name === name);
       addonElement.dataset.current = currentItem.current;
       addonElement.querySelector(".count").innerText = currentItem.current;
+
+      this.updateCurrentAddons();
     };
 
     addEventListeners() {
@@ -279,6 +305,7 @@ if (menu) {
     groups.push(group);
   });
 
+  //handle update-total
   window.addEventListener("update-total", (e) => {
     e.currentTarget.innerHtml = e.detail.total;
     const updateTarget = menu.querySelector(
@@ -287,6 +314,32 @@ if (menu) {
     updateTarget.innerHTML = e.detail.total;
   });
 
+  //handle update-addons
+  window.addEventListener("update-current-addons", (e) => {
+    const getAllChanges = () => {
+      let changes = [];
+
+      groups.forEach((group) => {
+        changes.push(...group.currentAddons);
+      });
+
+      return changes;
+    };
+
+    const changesSpan = menu.querySelector("#customize-pizza .changes");
+    const changes = getAllChanges();
+    changesSpan.innerHTML = "";
+
+    changes.forEach((addon, index) => {
+      if (index === changes.length - 1) {
+        changesSpan.innerHTML += `${addon.current} x ${addon.name}`;
+      } else {
+        changesSpan.innerHTML += `${addon.current} x ${addon.name}, `;
+      }
+    });
+  });
+
+  //handle change pizza size
   const sizeButtons = menu.querySelectorAll(".size-button");
   sizeButtons.forEach((sizeButton) => {
     sizeButton.addEventListener("click", () => {
@@ -294,14 +347,16 @@ if (menu) {
     });
   });
 
-  const customizePizzeAmountButton = menu.querySelectorAll(
+  //handle change pizza amount
+  const customizePizzaAmountButton = menu.querySelectorAll(
     "#customize-pizza .amount button"
   );
 
-  customizePizzeAmountButton.forEach((button) => {
+  customizePizzaAmountButton.forEach((button) => {
     button.addEventListener("click", () => {
       const target = document.querySelector(button.dataset.target);
       const { operation } = button.dataset;
+
       let value = parseInt(target.innerHTML);
 
       if (operation === "add") {

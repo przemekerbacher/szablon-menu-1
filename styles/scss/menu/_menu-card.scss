@@ -1,13 +1,13 @@
 .menu-card {
   min-height: 100vh;
   overflow-y: auto;
-  padding-top: 95px;
+  margin-top: $menu-card-margin-top;
 
   display: flex;
   flex-direction: column;
 
   .wrapper {
-    max-width: 74.49%;
+    width: 100%;
   }
 
   .categories {

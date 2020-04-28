@@ -115,6 +115,7 @@
   }
 
   .price {
+    margin-top: 5px;
     order: 2;
     display: flex;
   }
@@ -152,6 +153,8 @@
   .count {
     display: flex;
     align-items: center;
+
+    margin-top: 5px;
 
     span {
       margin: 0 10px;

@@ -7,11 +7,14 @@
     padding: 10px;
     border-radius: 10px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
   }
 
   .image {
-    max-width: 170px;
+    max-width: 140px;
+    min-width: 100px;
   }
 
   img {
@@ -27,7 +30,6 @@
 
   .text {
     margin: 0 10px;
-    text-align: justify;
     letter-spacing: 1px;
   }
 
