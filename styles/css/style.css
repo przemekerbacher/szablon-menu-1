@@ -574,8 +574,8 @@ input[type="submit"] {
 }
 
 .menu .menu-navigation .icon {
-  max-width: 40px;
-  margin-right: 5px;
+  max-width: 30px;
+  margin-right: 10px;
 }
 
 .menu .menu-navigation .icon img {

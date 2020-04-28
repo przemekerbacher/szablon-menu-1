@@ -325,7 +325,7 @@ if (menu) {
 
       return changes;
     };
-
+    alert();
     const changesSpan = menu.querySelector("#customize-pizza .changes");
     const changes = getAllChanges();
     changesSpan.innerHTML = "";
