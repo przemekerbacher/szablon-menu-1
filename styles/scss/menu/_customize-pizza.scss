@@ -35,6 +35,8 @@
     flex-grow: 1;
     padding: 10px 20px;
 
+    border-radius: 10px;
+
     text-align: center;
 
     &.active {
@@ -100,6 +102,7 @@
     .cancel {
       margin-right: 10px;
       padding: 10px 20px;
+      border-radius: 10px;
 
       background-color: $red;
       color: white;
@@ -108,6 +111,7 @@
       padding: 10px 20px;
       background-color: $cusotmize-pizza-size-background-color;
       color: white;
+      border-radius: 10px;
     }
   }
 
@@ -120,22 +124,20 @@
     width: 100%;
     margin: 20px 0;
     justify-content: flex-end;
+    align-items: center;
     display: flex;
 
-    input {
-      width: 50px;
-      padding: 10px;
+    span {
+      color: $green2;
+      font-size: 20px;
+      margin: 0 10px;
     }
 
     button {
-      height: 50px;
-      width: 50px;
-
+      font-size: 16px;
       display: flex;
       justify-content: center;
       align-items: center;
-
-      border: 1px solid white;
     }
   }
 }

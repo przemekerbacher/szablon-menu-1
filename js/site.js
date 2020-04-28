@@ -302,17 +302,15 @@ if (menu) {
     button.addEventListener("click", () => {
       const target = document.querySelector(button.dataset.target);
       const { operation } = button.dataset;
+      let value = parseInt(target.innerHTML);
 
       if (operation === "add") {
-        let value = parseInt(target.value);
-        target.value = ++value;
+        target.innerHTML = ++value;
       }
 
       if (operation === "remove") {
-        let value = parseInt(target.value);
-
         if (value > 0) {
-          target.value = --value;
+          target.innerHTML = --value;
         }
       }
     });
