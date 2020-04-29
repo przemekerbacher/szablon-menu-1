@@ -564,6 +564,10 @@ input[type="submit"] {
   color: #8bcc9a;
 }
 
+.menu .menu-navigation li:nth-child(1) a {
+  padding-top: 0;
+}
+
 .menu .menu-navigation li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -585,7 +589,7 @@ input[type="submit"] {
 .menu .menu-card {
   min-height: 100vh;
   overflow-y: auto;
-  margin-top: calc( 140px);
+  margin-top: calc( 150px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1375,6 +1379,8 @@ input[type="submit"] {
 
 .menu .login .wrapper {
   position: relative;
+  overflow: auto;
+  padding: 50px 0;
   background-color: black;
   background-attachment: fixed;
   background-size: cover;
@@ -1385,7 +1391,6 @@ input[type="submit"] {
 
 .menu .login form {
   margin: 0 auto;
-  margin-top: 150px;
   max-width: 300px;
 }
 

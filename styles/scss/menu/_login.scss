@@ -25,7 +25,8 @@
 
   .wrapper {
     position: relative;
-
+    overflow: auto;
+    padding: 50px 0;
     // background-image: url("../../images/background.jpg");
     background-color: black;
     background-attachment: fixed;
@@ -39,7 +40,6 @@
 
   form {
     margin: 0 auto;
-    margin-top: 150px;
     max-width: 300px;
   }
 

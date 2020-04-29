@@ -34,7 +34,7 @@ $navigation-logo-size: 120px;
 $navigation-vertical-padding: 10px;
 
 $navigation-height: calc(
-  #{$navigation-logo-size + (2 * $navigation-vertical-padding)}
+  #{$navigation-logo-size + (2 * $navigation-vertical-padding) + 10px}
 );
 
 //menu-card
