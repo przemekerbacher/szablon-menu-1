@@ -652,10 +652,6 @@ input[type="submit"] {
   display: block;
 }
 
-.menu .menu-card .menu-item.active .count button {
-  border: 1px solid black;
-}
-
 .menu .menu-card .menu-item.active .count button svg {
   color: black;
 }
@@ -743,6 +739,10 @@ input[type="submit"] {
       flex-wrap: wrap;
 }
 
+.menu .menu-card .menu-item .buy button img {
+  max-width: 100%;
+}
+
 .menu .menu-card .menu-item .price {
   margin-top: 5px;
   -webkit-box-ordinal-group: 3;
@@ -751,6 +751,19 @@ input[type="submit"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.menu .menu-card .menu-item .price button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 32px;
 }
 
 .menu .menu-card .menu-item .price span {
@@ -779,6 +792,7 @@ input[type="submit"] {
 .menu .menu-card .menu-item .basket button.add {
   display: block;
   color: white;
+  font-size: 30px;
 }
 
 .menu .menu-card .menu-item .basket button.remove {
@@ -823,7 +837,6 @@ input[type="submit"] {
 
 .menu .menu-card .menu-item .count .add,
 .menu .menu-card .menu-item .count .remove {
-  border: 1px solid white;
   color: white;
   border-radius: 50%;
   height: 30px;
@@ -1263,6 +1276,14 @@ input[type="submit"] {
 }
 
 @media (min-width: 700px) {
+  .menu .app p {
+    font-size: 14px !important;
+    line-height: 14px !important;
+  }
+  .menu .app small {
+    font-size: 12px !important;
+    line-height: 12px !important;
+  }
   .menu .navigation .menu-expand {
     display: none;
   }
@@ -1295,6 +1316,17 @@ input[type="submit"] {
   }
 }
 
+@media (min-width: 917px) {
+  .menu .app p {
+    font-size: 18px !important;
+    line-height: 18px !important;
+  }
+  .menu .app small {
+    font-size: 14px !important;
+    line-height: 14px !important;
+  }
+}
+
 @media (min-width: 1200px) {
   .menu .menu-card .menu-item {
     width: 50%;
@@ -1302,6 +1334,14 @@ input[type="submit"] {
   .menu .menu-navigation .app .content {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+  }
+  .menu .app .text p {
+    font-size: 20px !important;
+    line-height: 20px !important;
+  }
+  .menu .app .text small {
+    font-size: 16px !important;
+    line-height: 16px !important;
   }
 }
 
@@ -1404,14 +1444,11 @@ input[type="submit"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .menu .app .image {
@@ -1433,6 +1470,27 @@ input[type="submit"] {
 .menu .app .text {
   margin: 0 10px;
   letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  height: 100%;
+}
+
+.menu .app .text p {
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.menu .app .text small {
+  font-size: 16px;
+  line-height: 16px;
 }
 
 .menu .app .decoration {

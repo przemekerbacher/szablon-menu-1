@@ -68,7 +68,7 @@ if (menu) {
   if (basketButton)
     basketButton.addEventListener("click", function (e) {
       const target = menu.querySelector(e.currentTarget.dataset.target);
-      target.classList.add("active");
+      if (target) target.classList.add("active");
     });
 
   //handle close basket

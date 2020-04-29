@@ -7,9 +7,9 @@
     padding: 10px;
     border-radius: 10px;
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .image {
@@ -31,6 +31,21 @@
   .text {
     margin: 0 10px;
     letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    height: 100%;
+
+    p {
+      font-size: 20px;
+      line-height: 20px;
+      margin-bottom: 10px;
+    }
+
+    small {
+      font-size: 16px;
+      line-height: 16px;
+    }
   }
 
   .decoration {

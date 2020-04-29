@@ -37,7 +37,7 @@
 
     .count {
       button {
-        border: 1px solid $menu-item-active-name-font-color;
+        // border: 1px solid $menu-item-active-name-font-color;
 
         svg {
           color: $menu-item-active-name-font-color;
@@ -112,12 +112,25 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    button {
+      img {
+        max-width: 100%;
+      }
+    }
   }
 
   .price {
     margin-top: 5px;
     order: 2;
     display: flex;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 32px;
+    }
   }
 
   .price span {
@@ -142,6 +155,7 @@
     button.add {
       display: block;
       color: $menu-item-active-basket-color;
+      font-size: 30px;
     }
 
     button.remove {
@@ -177,7 +191,7 @@
 
     .add,
     .remove {
-      border: 1px solid $menu-item-name-font-color;
+      // border: 1px solid $menu-item-name-font-color;
       color: $menu-item-name-font-color;
       border-radius: 50%;
       height: 30px;
