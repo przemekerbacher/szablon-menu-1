@@ -1329,6 +1329,10 @@ input[type="submit"] {
   top: 0;
 }
 
+.menu .login .content {
+  position: relative;
+}
+
 .menu .login .wrapper {
   position: relative;
   background-color: black;

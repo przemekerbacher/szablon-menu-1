@@ -90,9 +90,15 @@ if (menu) {
 
   //close login form
   const login = menu.querySelector("#login");
-  const closeAnnotationButton = login.querySelector(".close button");
-  if (closeAnnotationButton)
-    closeAnnotationButton.addEventListener("click", () => {
+  const closeLoginButton = login.querySelector(".close button");
+  const cancelLoginButton = login.querySelector("button.cancel");
+  if (closeLoginButton)
+    closeLoginButton.addEventListener("click", () => {
+      login.classList.remove("active");
+    });
+  if (cancelLoginButton)
+    cancelLoginButton.addEventListener("click", (e) => {
+      e.preventDefault();
       login.classList.remove("active");
     });
 
