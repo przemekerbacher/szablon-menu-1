@@ -1,28 +1,19 @@
 const menu = document.querySelector(".menu");
 if (menu) {
-  const addToBasketButtons = menu.querySelectorAll(".add-to-basket");
+  //display-category on click
 
-  if (addToBasketButtons) {
-    addToBasketButtons.forEach((button) => {
-      button.addEventListener("click", function (e) {
-        e.preventDefault();
-        const iconAdd = button.querySelector(".add");
-        const iconOk = button.querySelector(".ok");
-
-        button.classList.toggle("active");
-        if (iconAdd) iconAdd.classList.toggle("hide");
-        if (iconOk) iconOk.classList.toggle("hide");
-      });
-    });
-  }
-
-  //display-category
+  //get buttons
   var categorySelectors = menu.querySelectorAll(".category-selector");
   if (categorySelectors)
     categorySelectors.forEach((categorySelector) => {
       categorySelector.addEventListener("click", function () {
+        //get all containers
         const categories = menu.querySelectorAll(".category");
+
+        //get current container
         const target = menu.querySelector(this.getAttribute("data-target"));
+
+        //set active clas only for selected element
         moveActiveClass(categorySelector, categorySelectors);
         moveActiveClass(target, categories);
       });
@@ -39,6 +30,8 @@ if (menu) {
   };
 
   //add collapsible effect
+
+  //get elements which will expand element
   const collasibleElements = menu.querySelectorAll(
     ".collapsible, .button-collapsible"
   );
@@ -46,11 +39,15 @@ if (menu) {
   if (collasibleElements)
     collasibleElements.forEach((element) => {
       element.addEventListener("click", function (e) {
+        //get target to expand
         const content = menu.querySelector(
           e.currentTarget.getAttribute("data-target")
         );
 
+        //toggle collapsible element active class
         e.currentTarget.classList.toggle("active");
+
+        //expand or collapse target
         toggleDisplay(content);
       });
     });
@@ -66,41 +63,47 @@ if (menu) {
       }
   };
 
-  //open basket
+  //open basket when button basket cklicked
   const basketButton = menu.querySelector("#basket");
-  basketButton.addEventListener("click", function (e) {
-    const target = menu.querySelector(e.currentTarget.dataset.target);
-    target.classList.add("active");
-  });
+  if (basketButton)
+    basketButton.addEventListener("click", function (e) {
+      const target = menu.querySelector(e.currentTarget.dataset.target);
+      target.classList.add("active");
+    });
 
-  //close basket
+  //handle close basket
   const order = menu.querySelector("#order");
-  const closeBasketButton = order.querySelector(".close button");
-  closeBasketButton.addEventListener("click", () => {
-    order.classList.remove("active");
-  });
+  if (order) {
+    const closeBasketButton = order.querySelector(".close button");
+    closeBasketButton.addEventListener("click", () => {
+      order.classList.remove("active");
+    });
+  }
 
   //open login form
   const loginButton = menu.querySelector("#login-button");
-  loginButton.addEventListener("click", function (e) {
-    const target = menu.querySelector(e.currentTarget.dataset.target);
-    target.classList.add("active");
-  });
+  if (loginButton)
+    loginButton.addEventListener("click", function (e) {
+      const target = menu.querySelector(e.currentTarget.dataset.target);
+      target.classList.add("active");
+    });
 
   //close login form
   const login = menu.querySelector("#login");
   const closeAnnotationButton = login.querySelector(".close button");
-  closeAnnotationButton.addEventListener("click", () => {
-    login.classList.remove("active");
-  });
+  if (closeAnnotationButton)
+    closeAnnotationButton.addEventListener("click", () => {
+      login.classList.remove("active");
+    });
 
   //show pizza customization
   const pizzaAddButtons = menu.querySelectorAll("#pizzas .add-to-basket");
-  pizzaAddButtons.forEach((pizzaButton) => {
-    pizzaButton.addEventListener("click", () => {
-      $("#customize-pizza").modal("show");
+  if (pizzaAddButtons)
+    pizzaAddButtons.forEach((pizzaButton) => {
+      pizzaButton.addEventListener("click", () => {
+        $("#customize-pizza").modal("show");
+      });
     });
-  });
 
   //navigate to app page
   const appElement = menu.querySelector(".app");
@@ -325,7 +328,6 @@ if (menu) {
 
       return changes;
     };
-    alert();
     const changesSpan = menu.querySelector("#customize-pizza .changes");
     const changes = getAllChanges();
     changesSpan.innerHTML = "";
