@@ -15,6 +15,7 @@
   <body>
     <div class="menu">
       <div class="wrapper">
+        <!-- #region navigation -->
         <div class="navigation">
           <div class="wrapper">
             <div class="logo">
@@ -66,7 +67,10 @@
             </div>
           </div>
         </div>
+        <!-- #endregion -->
+        <!-- #region menu-card -->
         <div class="menu-card">
+          <!-- #region menu-navigation -->
           <div class="menu-navigation">
             <h1>Menu</h1>
             <nav class="menu-nav collapse" id="menu">
@@ -233,6 +237,8 @@
               </div>
             </div>
           </div>
+          <!-- #endregion -->
+          <!-- #region product list -->
           <div class="wrapper">
             <div class="categories">
               <div id="starters" class="category active">
@@ -2256,8 +2262,11 @@
               </div>
             </div>
           </div>
+          <!-- #endregion -->
         </div>
-        <div id="order" class="order">
+        <!-- #endregion -->
+        <!-- #region hidden window -->
+        <div id="order" class="order hidden-window">
           <div class="wrapper">
             <div class="close hide-window" data-target="#order">
               <button>
@@ -2334,14 +2343,14 @@
             </div>
           </div>
         </div>
-        <div id="login" class="login">
+        <div id="login" class="login hidden-window">
           <div class="wrapper">
+            <div class="close hide-window" data-target="#login">
+              <button>
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
             <div class="container">
-              <div class="close hide-window" data-target="#login">
-                <button>
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
               <form action="">
                 <h3>Zaloguj się</h3>
                 <div class="content">
@@ -2375,6 +2384,8 @@
             </div>
           </div>
         </div>
+        <!-- #endregion -->
+        <!-- #region modal -->
         <div id="customize-pizza" class="modal">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -2563,8 +2574,57 @@
             </div>
           </div>
         </div>
+        <script>
+          const updateTotalItemValue = () => {
+            const customizationBox = document.querySelector("#customize-pizza");
+            const addons = customizationBox.querySelectorAll(".addon");
+            let summary = 0;
+
+            addons.forEach((addon) => {
+              summary += parseFloat(addon.dataset.price);
+            });
+
+            const summarySpan = customizationBox.querySelector(
+              ".price-summary .value"
+            );
+            summarySpan.innerHTML = summary.toFixed(2);
+          };
+          const displayActualAddons = () => {
+            const customizationBox = document.querySelector("#customize-pizza");
+            const addons = customizationBox.querySelectorAll(".addon");
+            let currentAddons = "";
+            let addonsWithValueMoreThanZero = [];
+
+            addons.forEach((addon) => {
+              const { current } = addon.dataset;
+              if (current > 0) {
+                addonsWithValueMoreThanZero.push(addon);
+              }
+            });
+
+            addonsWithValueMoreThanZero.forEach((addon, index) => {
+              const { current, name } = addon.dataset;
+              if (current > 0) {
+                if (index === addonsWithValueMoreThanZero.length - 1) {
+                  currentAddons += `${current} x ${name}`;
+                } else {
+                  currentAddons += `${current} x ${name}, `;
+                }
+              }
+            });
+
+            const changes = customizationBox.querySelector(".changes");
+
+            changes.innerHTML = currentAddons;
+          };
+
+          updateTotalItemValue();
+          displayActualAddons();
+        </script>
+        <!-- #endregion -->
       </div>
     </div>
+    <!-- #region scripts -->
     <script src="fontawesome-free-5.13.0-web/js/all.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -2582,5 +2642,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/site.js"></script>
+    <!-- #endregion -->
   </body>
 </html>

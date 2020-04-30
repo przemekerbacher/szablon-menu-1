@@ -1,12 +1,4 @@
 .login {
-  z-index: 2;
-  position: fixed;
-
-  height: 100vh;
-  width: 100vw;
-  left: 0;
-  top: -100%;
-
   display: flex;
   flex-direction: column;
 
@@ -17,44 +9,13 @@
 
   font-size: 1.5rem;
 
-  &.active {
-    top: 0;
-  }
-
-  .content {
-    position: relative;
-  }
-
   .wrapper {
-    position: relative;
-    overflow: auto;
-    padding: 50px 0;
-    // background-image: url("../../images/background.jpg");
-    background-color: black;
-    background-attachment: fixed;
-    background-size: cover;
-
-    min-height: 100vh;
-    width: 100%;
-
-    margin: 0 auto;
+    background-color: white;
   }
 
   form {
     margin: 0 auto;
     max-width: 300px;
-  }
-
-  .close {
-    position: absolute;
-    padding: 0px;
-    top: $hidden-menu-close-size;
-    right: $hidden-menu-close-size;
-    cursor: pointer;
-
-    svg {
-      color: $login-font-color;
-    }
   }
 
   .buttons {
@@ -69,11 +30,13 @@
 
       background-color: $login-cancel-background-color;
       color: $login-cancel-color;
+      border-radius: 10px;
     }
     .save {
       background-color: $login-save-background-color;
       color: $login-save-color;
       padding: 10px 20px;
+      border-radius: 10px;
     }
 
     .remind {
