@@ -2,6 +2,8 @@
   max-width: 800px;
   padding: 20px;
 
+  font-size: 1.5rem;
+
   background-color: $cusotmize-pizza-background-color;
   color: $cusotmize-pizza-color;
 
@@ -129,12 +131,12 @@
 
     span {
       color: $green2;
-      font-size: 20px;
+      font-size: 2rem;
       margin: 0 10px;
     }
 
     button {
-      font-size: 16px;
+      font-size: 1.6rem;
       display: flex;
       justify-content: center;
       align-items: center;

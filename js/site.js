@@ -31,7 +31,7 @@ if (menu) {
 
   //add collapsible effect
 
-  //get elements which will expand element
+  //get collapsible elements
   const collasibleElements = menu.querySelectorAll(
     ".collapsible, .button-collapsible"
   );
@@ -63,44 +63,32 @@ if (menu) {
       }
   };
 
-  //open basket when button basket cklicked
-  const basketButton = menu.querySelector("#basket");
-  if (basketButton)
-    basketButton.addEventListener("click", function (e) {
-      const target = menu.querySelector(e.currentTarget.dataset.target);
-      if (target) target.classList.add("active");
-    });
+  //handle show window
+  const showWindowButtons = menu.querySelectorAll(".show-window");
+  if (showWindowButtons) {
+    showWindowButtons.forEach((button) => {
+      const hideTarget = (e) => {
+        e.preventDefault();
 
-  //handle close basket
-  const order = menu.querySelector("#order");
-  if (order) {
-    const closeBasketButton = order.querySelector(".close button");
-    closeBasketButton.addEventListener("click", () => {
-      order.classList.remove("active");
+        const target = menu.querySelector(e.currentTarget.dataset.target);
+        target.classList.add("active");
+      };
+      button.addEventListener("click", hideTarget);
     });
   }
+  //handle close hidden windows
+  const hideWindowButtons = menu.querySelectorAll(".hide-window");
+  if (hideWindowButtons) {
+    hideWindowButtons.forEach((button) => {
+      const hideTarget = (e) => {
+        e.preventDefault();
 
-  //open login form
-  const loginButton = menu.querySelector("#login-button");
-  if (loginButton)
-    loginButton.addEventListener("click", function (e) {
-      const target = menu.querySelector(e.currentTarget.dataset.target);
-      target.classList.add("active");
+        const target = menu.querySelector(e.currentTarget.dataset.target);
+        target.classList.remove("active");
+      };
+      button.addEventListener("click", hideTarget);
     });
-
-  //close login form
-  const login = menu.querySelector("#login");
-  const closeLoginButton = login.querySelector(".close button");
-  const cancelLoginButton = login.querySelector("button.cancel");
-  if (closeLoginButton)
-    closeLoginButton.addEventListener("click", () => {
-      login.classList.remove("active");
-    });
-  if (cancelLoginButton)
-    cancelLoginButton.addEventListener("click", (e) => {
-      e.preventDefault();
-      login.classList.remove("active");
-    });
+  }
 
   //show pizza customization
   const pizzaAddButtons = menu.querySelectorAll("#pizzas .add-to-basket");
@@ -110,12 +98,6 @@ if (menu) {
         $("#customize-pizza").modal("show");
       });
     });
-
-  //navigate to app page
-  const appElement = menu.querySelector(".app");
-  appElement.addEventListener("click", function (e) {
-    window.location.href = e.currentTarget.dataset.url;
-  });
 
   //handle change item count
   const menuItems = menu.querySelectorAll(".menu-item");
@@ -140,14 +122,33 @@ if (menu) {
     });
   });
 
-  menuItems.forEach((menuItem) => {
-    const clickables = menuItem.querySelectorAll(".image, .price, .info");
-    clickables.forEach((clickable) => {
-      clickable.addEventListener("click", (e) => {
-        // addToBasket();
-      });
+  //handle counter
+  const counters = menu.querySelectorAll(".counter");
+  if (counters)
+    counters.forEach((counter) => {
+      const calculate = (type, target) => {
+        let currentValue = parseInt(target.innerHTML);
+        if (type === "add") {
+          target.innerHTML = ++currentValue;
+        }
+        if (type === "remove") {
+          if (currentValue > 0) target.innerHTML = --currentValue;
+        }
+      };
+
+      const handleClick = (e) => {
+        const target = counter.querySelector(e.currentTarget.dataset.target);
+        const operation = e.currentTarget.dataset.operation;
+
+        calculate(operation, target);
+      };
+
+      const add = counter.querySelector(".add");
+      const remove = counter.querySelector(".remove");
+
+      add.addEventListener("click", handleClick);
+      remove.addEventListener("click", handleClick);
     });
-  });
 
   const customizable = menu.querySelector(".customizable");
   const customizeButtons = customizable.querySelectorAll(
@@ -334,17 +335,22 @@ if (menu) {
 
       return changes;
     };
-    const changesSpan = menu.querySelector("#customize-pizza .changes");
-    const changes = getAllChanges();
-    changesSpan.innerHTML = "";
 
-    changes.forEach((addon, index) => {
-      if (index === changes.length - 1) {
-        changesSpan.innerHTML += `${addon.current} x ${addon.name}`;
-      } else {
-        changesSpan.innerHTML += `${addon.current} x ${addon.name}, `;
-      }
-    });
+    const updateChanges = () => {
+      const changesSpan = menu.querySelector("#customize-pizza .changes");
+      const changes = getAllChanges();
+      changesSpan.innerHTML = "";
+
+      changes.forEach((addon, index) => {
+        if (index === changes.length - 1) {
+          changesSpan.innerHTML += `${addon.current} x ${addon.name}`;
+        } else {
+          changesSpan.innerHTML += `${addon.current} x ${addon.name}, `;
+        }
+      });
+    };
+
+    updateChanges();
   });
 
   //handle change pizza size

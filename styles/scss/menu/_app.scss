@@ -1,8 +1,10 @@
 .app {
   cursor: pointer;
+  max-width: 300px;
 
   .content {
-    background-color: $app-background-color;
+    // background-color: $app-background-color;
+    background-color: #9acc99;
     padding: 10px;
     border-radius: 10px;
     display: flex;
@@ -18,9 +20,9 @@
 
   img {
     max-width: 100%;
-    background-color: $app-image-background-color;
+    // background-color: $app-image-background-color;
     border-radius: 10px;
-    padding: 10px;
+    // padding: 10px;
   }
 
   p {
