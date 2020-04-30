@@ -89,9 +89,12 @@
 
   .discount {
     background-color: $gold;
-    color: white;
+    background-color: #fecc00;
     padding-right: 10px;
     border-radius: 10px;
+    width: 260.35px;
+    margin-left: auto;
+    color: #1e2d2f;
   }
   .total {
     font-weight: normal;
@@ -148,6 +151,7 @@
     border-radius: 10px;
   }
   .order-button {
+    margin-top: 50px;
     display: flex;
   }
 }

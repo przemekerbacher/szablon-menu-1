@@ -980,7 +980,7 @@ body {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top: -100%;
+  top: -150%;
   left: 0;
   z-index: 2;
   background-color: black;
@@ -1130,9 +1130,12 @@ body {
 
 .menu .order .discount {
   background-color: #c87e29;
-  color: white;
+  background-color: #fecc00;
   padding-right: 10px;
   border-radius: 10px;
+  width: 260.35px;
+  margin-left: auto;
+  color: #1e2d2f;
 }
 
 .menu .order .total {
@@ -1195,6 +1198,7 @@ body {
 }
 
 .menu .order .order-button {
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1507,6 +1511,7 @@ body {
 .menu .app {
   cursor: pointer;
   max-width: 300px;
+  margin: 0 auto;
 }
 
 .menu .app .content {
@@ -1566,5 +1571,28 @@ body {
 .menu .app .decoration {
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.menu .qr {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.menu .qr .image img {
+  max-width: 100%;
+}
+
+.menu .qr p {
+  max-width: 180px;
 }
 /*# sourceMappingURL=style.css.map */
