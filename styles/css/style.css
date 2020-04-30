@@ -351,6 +351,7 @@ template {
 
 html {
   font-family: "roboto", sans-serif;
+  font-size: 10px;
 }
 
 h1,
@@ -366,10 +367,6 @@ h6 {
   display: none;
 }
 
-button {
-  outline: none !important;
-}
-
 input[type="submit"] {
   border: none;
 }
@@ -379,6 +376,18 @@ input[type="submit"] {
   overflow: hidden;
   -webkit-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  outline: none !important;
+  border-style: none;
+}
+
+body {
+  background-color: #000;
 }
 
 .menu {
@@ -419,7 +428,7 @@ input[type="submit"] {
           align-items: center;
   background-color: black;
   color: white;
-  padding: 10px 20px;
+  padding: 1rem 20px;
 }
 
 .menu .navigation .title {
@@ -431,7 +440,7 @@ input[type="submit"] {
 .menu .navigation .title h1 {
   font-weight: bold;
   letter-spacing: 1px;
-  font-size: 28px;
+  font-size: 2.8rem;
   margin: 0;
   padding: 0;
 }
@@ -456,7 +465,7 @@ input[type="submit"] {
 
 .menu .navigation .logo {
   margin-right: auto;
-  max-width: 120px;
+  max-width: 12rem;
 }
 
 .menu .navigation .logo img {
@@ -472,7 +481,7 @@ input[type="submit"] {
 }
 
 .menu .navigation .icons svg {
-  font-size: 20px;
+  font-size: 2rem;
   color: white;
 }
 
@@ -510,6 +519,7 @@ input[type="submit"] {
 }
 
 .menu .navigation .menu-expand {
+  margin: 0 10px;
   font-size: 20px;
 }
 
@@ -517,10 +527,14 @@ input[type="submit"] {
   color: white;
 }
 
+.menu .navigation .total {
+  font-size: 1.5rem;
+}
+
 .menu .menu-navigation {
   overflow-y: auto;
   min-width: 25.51%;
-  font-size: 25px;
+  font-size: 2.5rem;
   color: white;
   font-weight: bold;
   overflow-y: auto;
@@ -531,7 +545,7 @@ input[type="submit"] {
   font-weight: bold;
   color: #b30908;
   margin: 20px 0;
-  font-size: 40px;
+  font-size: 3rem;
 }
 
 .menu .menu-navigation ul {
@@ -589,7 +603,7 @@ input[type="submit"] {
 .menu .menu-card {
   min-height: 100vh;
   overflow-y: auto;
-  margin-top: calc( 150px);
+  margin-top: calc( 15rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -670,6 +684,11 @@ input[type="submit"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .menu .menu-card .menu-item .image {
@@ -699,7 +718,6 @@ input[type="submit"] {
       flex-wrap: wrap;
   -ms-flex-line-pack: justify;
       align-content: space-between;
-  max-width: 62.41%;
   width: 100%;
 }
 
@@ -710,7 +728,7 @@ input[type="submit"] {
 
 .menu .menu-card .menu-item .name {
   color: white;
-  font-size: 20px;
+  font-size: 2rem;
   font-family: "Roboto Slab", serif;
   margin-bottom: 20px;
 }
@@ -721,7 +739,7 @@ input[type="submit"] {
 
 .menu .menu-card .menu-item .details {
   color: #ddd;
-  font-size: 20px;
+  font-size: 2rem;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
 }
@@ -739,8 +757,6 @@ input[type="submit"] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .menu .menu-card .menu-item .buy button img {
@@ -767,7 +783,7 @@ input[type="submit"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 32px;
+  max-width: 3.2rem;
 }
 
 .menu .menu-card .menu-item .price span {
@@ -784,6 +800,7 @@ input[type="submit"] {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  font-size: 1.5rem;
 }
 
 .menu .menu-card .menu-item .basket {
@@ -796,7 +813,7 @@ input[type="submit"] {
 .menu .menu-card .menu-item .basket button.add {
   display: block;
   color: white;
-  font-size: 30px;
+  font-size: 3rem;
 }
 
 .menu .menu-card .menu-item .basket button.remove {
@@ -819,6 +836,7 @@ input[type="submit"] {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: #8bcc9a;
+  font-size: 1.5rem;
 }
 
 .menu .menu-card .menu-item .count .add {
@@ -843,8 +861,8 @@ input[type="submit"] {
 .menu .menu-card .menu-item .count .remove {
   color: white;
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  height: 3rem;
+  width: 3rem;
   font-size: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -864,15 +882,15 @@ input[type="submit"] {
 
 .menu .menu-card .menu-item .alergen {
   display: none;
-  height: 30px;
-  width: 30px;
+  height: 3rem;
+  width: 3rem;
   border: 1px solid white;
   border: 1px solid red;
   border-radius: 50%;
   text-align: center;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  font-size: 10px;
+  font-size: 1rem;
 }
 
 .menu .menu-card .category {
@@ -909,7 +927,7 @@ input[type="submit"] {
   display: none;
   text-align: left;
   margin-top: 0px;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .menu .alergens p {
@@ -918,7 +936,7 @@ input[type="submit"] {
 
 .menu .alergens svg {
   margin-left: 5px;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .menu .alergens button {
@@ -948,7 +966,7 @@ input[type="submit"] {
 .menu .alergens li {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: normal;
 }
 
@@ -970,11 +988,14 @@ input[type="submit"] {
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
   color: black;
+  font-size: 1.5rem;
 }
 
 .menu .order .wrapper {
   position: relative;
   margin: 0 auto;
+  overflow: auto;
+  padding: 50px 0;
   width: 100%;
   max-width: 1280px;
   background-color: white;
@@ -984,7 +1005,7 @@ input[type="submit"] {
 }
 
 .menu .order .container {
-  margin-top: 150px;
+  margin-top: 50px;
   max-width: 600px;
 }
 
@@ -994,8 +1015,8 @@ input[type="submit"] {
 
 .menu .order .close {
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 3rem;
+  right: 3rem;
   padding: 0px;
   cursor: pointer;
 }
@@ -1006,31 +1027,52 @@ input[type="submit"] {
 
 .menu .order h3 {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
-.menu .order .order-item {
+.menu .order .order-item .basic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.menu .order .details {
+  color: #444;
+  font-size: 1.3rem;
+}
+
+.menu .order .order-items {
+  border-bottom: 2px solid #ddd;
+}
+
+.menu .order .detail {
+  text-align: end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
+  margin-bottom: 10px;
+}
+
+.menu .order .detail .name {
+  margin-left: 20px;
 }
 
 .menu .order .name {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  margin-right: 10px;
 }
 
 .menu .order .times {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1050,9 +1092,24 @@ input[type="submit"] {
   margin-left: 10px;
 }
 
+.menu .order .edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu .order .edit .count {
+  margin: 0 10px;
+}
+
+.menu .order .edit button {
+  max-width: 2.8rem;
+}
+
 .menu .order .value {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
   text-align: end;
   font-weight: bold;
 }
@@ -1068,13 +1125,19 @@ input[type="submit"] {
   padding: 10px 0;
 }
 
-.menu .order .total,
 .menu .order .discount {
-  border-bottom: 1px solid #ddd;
+  background-color: #c87e29;
+  color: white;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+.menu .order .total {
+  font-weight: normal;
 }
 
 .menu .order .total-to-pay {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .menu .order .edit {
@@ -1093,6 +1156,11 @@ input[type="submit"] {
   border: none;
   background-color: transparent;
   color: white;
+  width: 40px;
+}
+
+.menu .order .edit button img {
+  max-width: 100%;
 }
 
 .menu .order .edit button:hover {
@@ -1103,15 +1171,30 @@ input[type="submit"] {
 .menu .order a,
 .menu .order button.save {
   padding: 10px 20px;
-  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #8bcc9a;
   display: block;
   text-align: center;
-  color: black;
-  margin-left: auto;
+  color: white;
+  margin-left: 10px;
 }
 
 .menu .order a {
   text-decoration: none;
+}
+
+.menu .order .back {
+  margin-left: auto;
+  background-color: #b30908;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.menu .order .order-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .menu .customize-pizza {
@@ -1279,6 +1362,13 @@ input[type="submit"] {
           align-items: center;
 }
 
+@media (min-width: 400px) {
+  .menu .menu-card .menu-item .wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
 @media (min-width: 700px) {
   .menu .app p {
     font-size: 14px !important;
@@ -1367,6 +1457,7 @@ input[type="submit"] {
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
   overflow: auto;
+  font-size: 1.5rem;
 }
 
 .menu .login.active {
@@ -1397,8 +1488,8 @@ input[type="submit"] {
 .menu .login .close {
   position: absolute;
   padding: 0px;
-  top: 30px;
-  right: 30px;
+  top: 3rem;
+  right: 3rem;
   cursor: pointer;
 }
 
@@ -1438,7 +1529,6 @@ input[type="submit"] {
 }
 
 .menu .app {
-  font-size: 14px;
   cursor: pointer;
 }
 
@@ -1488,29 +1578,18 @@ input[type="submit"] {
 }
 
 .menu .app .text p {
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 2rem;
+  line-height: 2rem;
   margin-bottom: 10px;
 }
 
 .menu .app .text small {
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
 }
 
 .menu .app .decoration {
   -ms-flex-item-align: end;
       align-self: flex-end;
-}
-
-button {
-  margin: 0;
-  padding: 0;
-  background-color: transparent;
-  border-style: none;
-}
-
-body {
-  background-color: #000;
 }
 /*# sourceMappingURL=style.css.map */

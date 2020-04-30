@@ -55,6 +55,8 @@
     border: 1px solid $menu-item-border-color;
 
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .image {
@@ -76,7 +78,7 @@
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
-    max-width: 62.41%;
+    // max-width: 62.41%;
     width: 100%;
   }
 
@@ -111,7 +113,6 @@
   .buy {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 
     button {
       img {
@@ -129,7 +130,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      max-width: 32px;
+      max-width: 3.2rem;
     }
   }
 
@@ -143,6 +144,7 @@
     align-items: center;
 
     color: $menu-item-price-color;
+    font-size: 1.5rem;
   }
 
   .basket {
@@ -155,7 +157,7 @@
     button.add {
       display: block;
       color: $menu-item-active-basket-color;
-      font-size: 30px;
+      font-size: 3rem;
     }
 
     button.remove {
@@ -175,6 +177,7 @@
       font-family: $font-2;
       font-weight: bold;
       color: $menu-item-count-color;
+      font-size: 1.5rem;
     }
 
     .add {
@@ -194,8 +197,8 @@
       // border: 1px solid $menu-item-name-font-color;
       color: $menu-item-name-font-color;
       border-radius: 50%;
-      height: 30px;
-      width: 30px;
+      height: 3rem;
+      width: 3rem;
 
       font-size: 15px;
 

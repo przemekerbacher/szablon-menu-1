@@ -23,33 +23,33 @@ $navigation-background-color: black;
 $navigation-hover-color: $green2;
 
 $navigation-color: white;
-$navigation-font-size: 28px;
+$navigation-font-size: 2.8rem;
 $navigation-font-family: $font-3;
 
-$navigation-icon-size: 20px;
+$navigation-icon-size: 2rem;
 $navigation-icon-color: white;
 
-$navigation-logo-size: 120px;
+$navigation-logo-size: 12rem;
 
-$navigation-vertical-padding: 10px;
+$navigation-vertical-padding: 1rem;
 
 $navigation-height: calc(
-  #{$navigation-logo-size + (2 * $navigation-vertical-padding) + 10px}
+  #{$navigation-logo-size + (2 * $navigation-vertical-padding) + 1rem}
 );
 
 //menu-card
 $menu-card-margin-top: $navigation-height;
 
 //menu-item
-$menu-item-name-font-size: 20px;
+$menu-item-name-font-size: 2rem;
 $menu-item-name-font-color: white;
 $menu-item-name-font-family: $font-3;
 
-$menu-item-alergen-font-size: 10px;
-$menu-item-alergen-size: 30px;
+$menu-item-alergen-font-size: 1rem;
+$menu-item-alergen-size: 3rem;
 $menu-item-alergen-family: $font-1;
 
-$menu-item-details-font-size: 20px;
+$menu-item-details-font-size: 2rem;
 $menu-item-details-font-color: #ddd;
 $menu-item-details-font-family: $font-1;
 
@@ -79,18 +79,18 @@ $menu-item-active-basket-color: white;
 $menu-item-active-basket-background-color: $green2;
 
 //menu-navigation
-$menu-navigation-font-size: 25px;
+$menu-navigation-font-size: 2.5rem;
 $menu-navigation-color: white;
 $menu-active-navigation-color: $green2;
 $menu-navigation-font-family: $font-3;
 
 $menu-navigation-header-color: $red;
-$menu-navigation-header-font-size: 40px;
+$menu-navigation-header-font-size: 3rem;
 $menu-navigation-header-font-family: $font-3;
 
 //alergens
 $alergens-font-color: white;
-$alergens-font-size: 18px;
+$alergens-font-size: 1.8rem;
 
 //login
 $login-background-color: black;
@@ -109,7 +109,7 @@ $hidden-menu-background: black;
 $hidden-menu-border-color: white;
 $hidden-menu-hover-color: cadetblue;
 $hidden-menu-color: white;
-$hidden-menu-close-size: 30px;
+$hidden-menu-close-size: 3rem;
 $hidden-menu-icon-size: 12px;
 $hidden-menu-paddings: 95px 20px;
 

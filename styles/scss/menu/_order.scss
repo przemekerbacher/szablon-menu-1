@@ -11,9 +11,13 @@
   transition: top 0.3s;
   color: $order-text-color;
 
+  font-size: 1.5rem;
+
   .wrapper {
     position: relative;
     margin: 0 auto;
+    overflow: auto;
+    padding: 50px 0;
     width: 100%;
     max-width: $max-width;
     // background-image: url("../../images/background.jpg");
@@ -24,7 +28,7 @@
   }
 
   .container {
-    margin-top: 150px;
+    margin-top: 50px;
     max-width: 600px;
   }
 
@@ -45,22 +49,42 @@
 
   h3 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 
-  .order-item {
+  .order-item .basic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .details {
+    color: #444;
+    font-size: 1.3rem;
+  }
+
+  .order-items {
+    border-bottom: 2px solid #ddd;
+  }
+
+  .detail {
+    text-align: end;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
+    margin-bottom: 10px;
+
+    .name {
+      margin-left: 20px;
+    }
   }
 
   .name {
-    flex-basis: 30%;
+    margin-right: 10px;
   }
 
   .times {
-    flex-grow: 1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,8 +98,19 @@
     }
   }
 
+  .edit {
+    display: flex;
+    align-items: center;
+
+    .count {
+      margin: 0 10px;
+    }
+
+    button {
+      max-width: 2.8rem;
+    }
+  }
   .value {
-    flex-basis: 30%;
     text-align: end;
     font-weight: bold;
   }
@@ -91,13 +126,18 @@
     padding: 10px 0;
   }
 
-  .total,
   .discount {
-    border-bottom: 1px solid #ddd;
+    background-color: $gold;
+    color: white;
+    padding-right: 10px;
+    border-radius: 10px;
+  }
+  .total {
+    font-weight: normal;
   }
 
   .total-to-pay {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .edit {
@@ -113,6 +153,10 @@
       border: none;
       background-color: transparent;
       color: white;
+      width: 40px;
+      img {
+        max-width: 100%;
+      }
 
       &:hover {
         color: $hidden-menu-hover-color;
@@ -124,13 +168,25 @@
   a,
   button.save {
     padding: 10px 20px;
-    border: 1px solid $order-text-color;
+    border-radius: 10px;
+    background-color: $green2;
     display: block;
     text-align: center;
-    color: $order-text-color;
-    margin-left: auto;
+    color: white;
+    margin-left: 10px;
   }
   a {
     text-decoration: none;
+  }
+
+  .back {
+    margin-left: auto;
+    background-color: $red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  .order-button {
+    display: flex;
   }
 }

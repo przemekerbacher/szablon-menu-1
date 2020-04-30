@@ -1,3 +1,12 @@
+@media (min-width: 400px) {
+  .menu-card {
+    .menu-item {
+      .wrapper {
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}
 @media (min-width: 700px) {
   .app {
     p {
