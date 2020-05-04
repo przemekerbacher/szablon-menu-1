@@ -384,4 +384,22 @@ if (menu) {
       }
     });
   });
+
+  //smaller navigation on scroll
+  const navigation = menu.querySelector(".navigation");
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 0) {
+      navigation.classList.add("smaller");
+    } else {
+      navigation.classList.remove("smaller");
+    }
+  });
+
+  window.addEventListener("load", function () {
+    if (window.scrollY > 0) {
+      navigation.classList.add("smaller");
+    } else {
+      navigation.classList.remove("smaller");
+    }
+  });
 }

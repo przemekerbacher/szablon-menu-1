@@ -14,6 +14,20 @@
 
   padding: 20px;
 
+  text-align: center;
+
+  &.smaller {
+    .logo {
+      width: 8rem;
+    }
+
+    .title {
+      h1 {
+        font-size: 25px;
+      }
+    }
+  }
+
   .wrapper {
     border-radius: 10px;
 
@@ -38,6 +52,8 @@
       font-size: $navigation-font-size;
       margin: 0;
       padding: 0;
+
+      transition: font-size 0.3s;
     }
 
     .dec-1,
@@ -60,7 +76,8 @@
 
   .logo {
     margin-right: auto;
-    max-width: $navigation-logo-size;
+    width: $navigation-logo-size;
+    transition: width 0.3s;
 
     img {
       max-width: 100%;
